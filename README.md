@@ -1,2 +1,0 @@
-# candy-night
-Horror working sim where you have to survive your night shift while piñatas are trying to kill you
