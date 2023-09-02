@@ -7,7 +7,7 @@ public class PlayerMovement : MonoBehaviour
 {
     public float Speed;
 
-    [SerializeField] private PlayerInput playerInput;
+    private PlayerInput controls;
     private Rigidbody rb;
 
     private Vector2 input;
@@ -16,21 +16,27 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-        playerInput = GetComponent<PlayerInput>();
+        controls = new PlayerInput();
+        controls.Enable();
+    }
+
+    void OnDestroy() {
+        controls.Disable();
     }
 
     // Update is called once per frame
     void Update()
     {
-        input = playerInput.actions["Move"].ReadValue<Vector2>();
-        Debug.Log(input);
-        
-        
+        // input = playerInput.actions["Move"].ReadValue<Vector2>();
+        input = controls.Player.Move.ReadValue<Vector2>();
     }
 
     private void FixedUpdate()
     {
-        rb.AddForce(new Vector3(input.x, 0f, input.y) * Speed);
+
+        var movement = (input.y * this.transform.forward) + (input.x * this.transform.right);
+        // rb.AddForce(new Vector3(input.x, 0f, input.y) * Speed);
+        rb.AddForce(movement * Speed);
     }
 
 }
