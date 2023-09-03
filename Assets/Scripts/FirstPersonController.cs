@@ -8,9 +8,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Events;
+
 
 #if UNITY_EDITOR
-    using UnityEditor;
+using UnityEditor;
     using System.Net;
 #endif
 
@@ -124,10 +126,12 @@ public class FirstPersonController : MonoBehaviour
     public Transform joint;
     public float bobSpeed = 10f;
     public Vector3 bobAmount = new Vector3(.15f, .05f, 0f);
+    public UnityEvent OnStep = new UnityEvent();
 
     // Internal Variables
     private Vector3 jointOriginalPos;
     private float timer = 0;
+    private bool isStepDone = false;
 
     #endregion
 
@@ -518,6 +522,15 @@ public class FirstPersonController : MonoBehaviour
             }
             // Applies HeadBob movement
             joint.localPosition = new Vector3(jointOriginalPos.x + Mathf.Sin(timer) * bobAmount.x, jointOriginalPos.y + Mathf.Sin(timer) * bobAmount.y, jointOriginalPos.z + Mathf.Sin(timer) * bobAmount.z);
+
+            if(Mathf.Sin(timer) <= -0.5f && !isStepDone){
+                OnStep?.Invoke();
+                isStepDone = true;
+
+            }else if(Mathf.Sin(timer) > 0){
+                isStepDone = false;
+            }
+
         }
         else
         {
