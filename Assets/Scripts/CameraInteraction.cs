@@ -33,6 +33,7 @@ public class CameraInteraction : MonoBehaviour
             {
                 Debug.Log(hit.transform.name);
                 hit.transform.GetComponent<Interactable>().Interact();
+                pickable = hit.collider.GetComponent<Pickable>();
                 ArmBox = true;
             }
 
