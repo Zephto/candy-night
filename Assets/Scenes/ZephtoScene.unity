@@ -338,19 +338,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Cam: {fileID: 552001128}
   rayDistance: 5
---- !u!114 &552001133
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 552001127}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  attenuationObject: {fileID: 0}
+  pickable: {fileID: 0}
+  candyEstant: {fileID: 0}
+  ArmBox: 0
 --- !u!1 &556058296
 GameObject:
   m_ObjectHideFlags: 0
@@ -465,6 +455,9 @@ MonoBehaviour:
   zoneArm: {fileID: 787227842}
   rb: {fileID: 556058302}
   coll: {fileID: 556058297}
+  candyEstant: {fileID: 0}
+  cameraInteraction: {fileID: 0}
+  CantidadDeDulces: 0
 --- !u!54 &556058302
 Rigidbody:
   m_ObjectHideFlags: 0
