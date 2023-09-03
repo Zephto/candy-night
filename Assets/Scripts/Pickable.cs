@@ -9,9 +9,23 @@ public class Pickable : Interactable
     public Rigidbody rb;
     public Collider coll;
 
+    public CandyEstant candyEstant;
+    public CameraInteraction cameraInteraction;
+
+    public int CantidadDeDulces;
+
     private void Start()
     {
         
+    }
+
+    private void Update()
+    {
+        if(CantidadDeDulces == 0)
+        {
+            cameraInteraction.ArmBox = false;
+            Destroy(gameObject);
+        }
     }
 
     public override void Interact()
@@ -25,6 +39,7 @@ public class Pickable : Interactable
         
         rb.isKinematic = true; coll.enabled = false; rb.useGravity = false;
 
+        
 
     }
 
