@@ -24,7 +24,7 @@ public class CharacterAudios : MonoBehaviour {
 		_character.OnStep.AddListener(()=>PlayStep());
 	}
 
-	#region Private Methods
-	private void PlayStep() => RuntimeManager.PlayOneShot(_step, this.transform.position);
+	#region Public Methods
+	public void PlayStep() => RuntimeManager.PlayOneShot(_step, this.transform.position);
 	#endregion
 }
