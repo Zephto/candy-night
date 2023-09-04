@@ -76,6 +76,13 @@ MonoBehaviour:
       Data3: -1635322213
       Data4: 1673696813
     Path: event:/Enemies/PinataScream
+  step:
+    Guid:
+      Data1: 545754804
+      Data2: 1155645931
+      Data3: 1574842283
+      Data4: 1392063341
+    Path: event:/Enemies/EnemySteps
 --- !u!23 &7703102580008750276
 MeshRenderer:
   m_ObjectHideFlags: 0

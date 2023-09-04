@@ -65,7 +65,7 @@ MonoBehaviour:
       Data2: 1305664207
       Data3: 604439684
       Data4: 1818237471
-    Path: event:/Player/steps
+    Path: event:/Player/Steps
 --- !u!114 &5342831350253197773
 MonoBehaviour:
   m_ObjectHideFlags: 0

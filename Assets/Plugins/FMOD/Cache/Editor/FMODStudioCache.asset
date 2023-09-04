@@ -1,32 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-9160192823494839616
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Player/steps
-  m_EditorClassIdentifier: 
-  Path: event:/Player/steps
-  Guid:
-    Data1: -1329755487
-    Data2: 1305664207
-    Data3: 604439684
-    Data4: 1818237471
-  Banks:
-  - {fileID: 3560937628706698467}
-  IsStream: 0
-  Is3D: 1
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
 --- !u!114 &-7847547866248821800
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -42,11 +15,38 @@ MonoBehaviour:
   Path: Fmod/candy-night-audios/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638293602575460984
+  lastModified: 638293703597490171
   FileSizes:
   - Name: 
-    Value: 824
+    Value: 1068
   Exists: 1
+--- !u!114 &-6028820601727281888
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Enemies/EnemySteps
+  m_EditorClassIdentifier: 
+  Path: event:/Enemies/EnemySteps
+  Guid:
+    Data1: 545754804
+    Data2: 1155645931
+    Data3: 1574842283
+    Data4: 1392063341
+  Banks:
+  - {fileID: 3560937628706698467}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-3459144465608530549
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -74,6 +74,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-2488295592721321507
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Player/Grab
+  m_EditorClassIdentifier: 
+  Path: event:/Player/Grab
+  Guid:
+    Data1: 730432827
+    Data2: 1160698623
+    Data3: 245699770
+    Data4: 608955725
+  Banks:
+  - {fileID: 3560937628706698467}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -91,14 +118,45 @@ MonoBehaviour:
   - {fileID: 3560937628706698467}
   EditorEvents:
   - {fileID: -3459144465608530549}
-  - {fileID: -9160192823494839616}
+  - {fileID: -2488295592721321507}
+  - {fileID: 8626564196457117790}
+  - {fileID: 780857091696231878}
+  - {fileID: -6028820601727281888}
+  - {fileID: 7916381857292720903}
   EditorParameters: []
   MasterBanks:
   - {fileID: 3560937628706698467}
   StringsBanks:
   - {fileID: -7847547866248821800}
-  cacheTime: 638293602575460984
+  cacheTime: 638293703597490171
   cacheVersion: 131607
+--- !u!114 &780857091696231878
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Player/Steps
+  m_EditorClassIdentifier: 
+  Path: event:/Player/Steps
+  Guid:
+    Data1: -1329755487
+    Data2: 1305664207
+    Data3: 604439684
+    Data4: 1818237471
+  Banks:
+  - {fileID: 3560937628706698467}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &3560937628706698467
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -114,6 +172,85 @@ MonoBehaviour:
   Path: Fmod/candy-night-audios/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638293602575440986
+  lastModified: 638293703597470174
   FileSizes: []
   Exists: 1
+--- !u!114 &5101426414860696942
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Ambient/tension
+  m_EditorClassIdentifier: 
+  Name: tension
+  StudioPath: 
+  Min: 0
+  Max: 2
+  Default: 0
+  ID:
+    data1: 2521747420
+    data2: 607313953
+  Type: 1
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &7916381857292720903
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Ambient/Ambient
+  m_EditorClassIdentifier: 
+  Path: event:/Ambient/Ambient
+  Guid:
+    Data1: -1144216389
+    Data2: 1189100546
+    Data3: -428361080
+    Data4: 930090139
+  Banks:
+  - {fileID: 3560937628706698467}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: 5101426414860696942}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 183364
+--- !u!114 &8626564196457117790
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Ambient/Lights
+  m_EditorClassIdentifier: 
+  Path: event:/Ambient/Lights
+  Guid:
+    Data1: 1704703364
+    Data2: 1260150571
+    Data3: -1072964733
+    Data4: 81284132
+  Banks:
+  - {fileID: 3560937628706698467}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 33039

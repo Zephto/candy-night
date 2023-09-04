@@ -35,6 +35,8 @@ public class EnemyController : MonoBehaviour {
 	void Start() {
 		agent.isStopped = true;
 		stopDistance = 1f;
+
+		InvokeRepeating("PlaySteps", 0f, 1f);
 	}
 
 	void Update() {
@@ -44,9 +46,9 @@ public class EnemyController : MonoBehaviour {
 
 			var distance = Vector3.Distance(this.transform.position, playerReference.transform.position);
 			
-			Debug.Log("distance " + distance);
 			if(distance > stopDistance){
 				agent.SetDestination(playerReference.transform.position);
+				//Caminando
 			}else{
 				//El enemigo ha atacado
 				agent.isStopped = true;
@@ -58,5 +60,13 @@ public class EnemyController : MonoBehaviour {
 			agent.isStopped = true;
 		}
 	}
+
+	#region Private Methods
+	private void PlaySteps(){
+		if(!agent.isStopped){
+			_enemyAudios.PlaySteps();
+		}
+	}
+	#endregion
 
 }
