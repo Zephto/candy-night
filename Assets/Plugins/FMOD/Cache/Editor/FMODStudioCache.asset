@@ -1,5 +1,32 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-9160192823494839616
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Player/steps
+  m_EditorClassIdentifier: 
+  Path: event:/Player/steps
+  Guid:
+    Data1: -1329755487
+    Data2: 1305664207
+    Data3: 604439684
+    Data4: 1818237471
+  Banks:
+  - {fileID: 3560937628706698467}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-7847547866248821800
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15,11 +42,38 @@ MonoBehaviour:
   Path: Fmod/candy-night-audios/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638292996920000000
+  lastModified: 638293602575460984
   FileSizes:
   - Name: 
-    Value: 754
+    Value: 824
   Exists: 1
+--- !u!114 &-3459144465608530549
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Enemies/PinataScream
+  m_EditorClassIdentifier: 
+  Path: event:/Enemies/PinataScream
+  Guid:
+    Data1: 607842640
+    Data2: 1333688449
+    Data3: -1635322213
+    Data4: 1673696813
+  Banks:
+  - {fileID: 3560937628706698467}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -36,41 +90,15 @@ MonoBehaviour:
   - {fileID: -7847547866248821800}
   - {fileID: 3560937628706698467}
   EditorEvents:
-  - {fileID: 1307568057047241983}
+  - {fileID: -3459144465608530549}
+  - {fileID: -9160192823494839616}
   EditorParameters: []
   MasterBanks:
   - {fileID: 3560937628706698467}
   StringsBanks:
   - {fileID: -7847547866248821800}
-  cacheTime: 638292996920000000
+  cacheTime: 638293602575460984
   cacheVersion: 131607
---- !u!114 &1307568057047241983
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/steps
-  m_EditorClassIdentifier: 
-  Path: event:/steps
-  Guid:
-    Data1: -1329755487
-    Data2: 1305664207
-    Data3: 604439684
-    Data4: 1818237471
-  Banks:
-  - {fileID: 3560937628706698467}
-  IsStream: 0
-  Is3D: 1
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
 --- !u!114 &3560937628706698467
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -86,6 +114,6 @@ MonoBehaviour:
   Path: Fmod/candy-night-audios/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638292996920000000
+  lastModified: 638293602575440986
   FileSizes: []
   Exists: 1

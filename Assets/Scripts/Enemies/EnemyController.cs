@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using FMOD;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -9,10 +8,17 @@ using UnityEngine.AI;
 /// </summary>
 public class EnemyController : MonoBehaviour {
 	
+	#region Classes references
+	private EnemyAudios _enemyAudios;
+	#endregion
+
 	#region Private variables
+	//Movement
+	private float stopDistance;
+
 	//Navmesh variables
 	private NavMeshAgent agent;
-	private FirstPersonController playerReference;
+	private CharacterActions playerReference;
 	
 	//In camera detector
 	private Plane[] cameraFrustrum;
@@ -20,17 +26,34 @@ public class EnemyController : MonoBehaviour {
 	#endregion
 
 	void Awake() {
-		playerReference = GameObject.FindObjectOfType<FirstPersonController>();
-		agent			= this.GetComponent<NavMeshAgent>();
-		enemyCollider	= this.GetComponent<Collider>();
+		_enemyAudios		= this.GetComponent<EnemyAudios>();
+		playerReference 	= GameObject.FindObjectOfType<CharacterActions>();
+		agent				= this.GetComponent<NavMeshAgent>();
+		enemyCollider		= this.GetComponent<Collider>();
+	}
+
+	void Start() {
+		agent.isStopped = true;
+		stopDistance = 1f;
 	}
 
 	void Update() {
-		
 		cameraFrustrum = GeometryUtility.CalculateFrustumPlanes(Camera.main);
 		if(!GeometryUtility.TestPlanesAABB(cameraFrustrum, enemyCollider.bounds)) {
 			agent.isStopped = false;
-			agent.SetDestination(playerReference.transform.position);
+
+			var distance = Vector3.Distance(this.transform.position, playerReference.transform.position);
+			
+			Debug.Log("distance " + distance);
+			if(distance > stopDistance){
+				agent.SetDestination(playerReference.transform.position);
+			}else{
+				//El enemigo ha atacado
+				agent.isStopped = true;
+				playerReference.Kill(this.transform);
+				_enemyAudios.PlayScream();
+			}
+
 		}else{
 			agent.isStopped = true;
 		}
