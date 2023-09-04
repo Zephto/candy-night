@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &787227841
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 787227842}
+  m_Layer: 0
+  m_Name: ZoneArm
+  m_TagString: ZoneArm
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &787227842
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 787227841}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.359, y: -0.304, z: 0.543}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4459864851310106429}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4459864850019384750
 GameObject:
   m_ObjectHideFlags: 0
@@ -78,6 +109,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc5cc6b731fd94d48a915c8c395e75f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  zoneArm: {fileID: 787227841}
 --- !u!23 &4459864850019384736
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -85,7 +117,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4459864850019384750}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -172,7 +204,7 @@ MonoBehaviour:
   crosshair: 1
   crosshairImage: {fileID: 21300000, guid: be4ce60e2c9768c44b9b10b9c5258045, type: 3}
   crosshairColor: {r: 1, g: 1, b: 1, a: 1}
-  enableZoom: 1
+  enableZoom: 0
   holdToZoom: 1
   zoomKey: 324
   zoomFOV: 30
@@ -194,10 +226,10 @@ MonoBehaviour:
   sprintBar: {fileID: 4459864850888339820}
   sprintBarWidthPercent: 0.3
   sprintBarHeightPercent: 0.02
-  enableJump: 1
+  enableJump: 0
   jumpKey: 32
   jumpPower: 5
-  enableCrouch: 1
+  enableCrouch: 0
   holdToCrouch: 1
   crouchKey: 306
   crouchHeight: 0.75
@@ -422,8 +454,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4459864851310106429}
   - component: {fileID: 4459864851310106426}
-  - component: {fileID: 4459864851310106427}
   - component: {fileID: 166693663188717272}
+  - component: {fileID: 552001131}
+  - component: {fileID: 552001133}
   m_Layer: 0
   m_Name: PlayerCamera
   m_TagString: MainCamera
@@ -444,6 +477,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4459864851551516607}
+  - {fileID: 787227842}
   m_Father: {fileID: 4459864851508666808}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -490,15 +524,37 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!81 &4459864851310106427
-AudioListener:
+--- !u!114 &166693663188717272
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4459864851310106424}
   m_Enabled: 1
---- !u!114 &166693663188717272
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attenuationObject: {fileID: 4459864850019384750}
+--- !u!114 &552001131
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4459864851310106424}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53ca68ba035bbde4d97acdc45ae01344, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Cam: {fileID: 4459864851310106429}
+  rayDistance: 5
+  pickable: {fileID: 0}
+  candyEstant: {fileID: 0}
+  ArmBox: 0
+--- !u!114 &552001133
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

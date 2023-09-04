@@ -5,9 +5,15 @@ using UnityEngine;
 /// <summary>
 /// Componente usado para controlar varias cosas del player
 /// </summary>
-public class CharacterActions : MonoBehaviour {
+public class CharacterController : MonoBehaviour {
 	
+	#region Public variables
+	public GameObject zoneArm;
+	#endregion
+
+	#region Private variables
 	private FirstPersonController player;
+	#endregion
 
 	void Awake() {
 		player = this.GetComponent<FirstPersonController>();

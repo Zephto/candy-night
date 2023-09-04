@@ -15,7 +15,7 @@ MonoBehaviour:
   Path: Fmod/candy-night-audios/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638293709599898054
+  lastModified: 638293730670349216
   FileSizes:
   - Name: 
     Value: 1068
@@ -128,7 +128,7 @@ MonoBehaviour:
   - {fileID: 3560937628706698467}
   StringsBanks:
   - {fileID: -7847547866248821800}
-  cacheTime: 638293709599898054
+  cacheTime: 638293730670349216
   cacheVersion: 131607
 --- !u!114 &780857091696231878
 MonoBehaviour:
@@ -172,7 +172,7 @@ MonoBehaviour:
   Path: Fmod/candy-night-audios/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638293709599858061
+  lastModified: 638293730670309212
   FileSizes: []
   Exists: 1
 --- !u!114 &5101426414860696942
