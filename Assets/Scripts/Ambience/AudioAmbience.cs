@@ -16,8 +16,25 @@ public class AudioAmbience : MonoBehaviour {
 	private EventInstance ambientSoundInstance;
 	#endregion
 
+	#region Private variables
+	private int currentTension = 0;
+	#endregion
+
 	void Start() {
 		ambientSoundInstance = RuntimeManager.CreateInstance(ambientSound);
 		ambientSoundInstance.start();
+		currentTension = tension = 0;
+	}
+
+	void OnDestroy() {
+		ambientSoundInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+	}
+
+	void Update() {
+		if(tension != currentTension){
+			currentTension = tension;
+			ambientSoundInstance.setParameterByName("tension", currentTension);
+
+		}
 	}
 }

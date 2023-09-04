@@ -289,6 +289,9 @@
 		<property name="length">
 			<value>26.749375000000001</value>
 		</property>
+		<property name="volume">
+			<value>-3.5</value>
+		</property>
 		<relationship name="audioFile">
 			<destination>{0246dcc7-3ab1-4f77-bd99-3380471fe46a}</destination>
 		</relationship>
@@ -299,6 +302,9 @@
 		</property>
 		<property name="length">
 			<value>26.241995464852607</value>
+		</property>
+		<property name="volume">
+			<value>-4</value>
 		</property>
 		<relationship name="audioFile">
 			<destination>{74901576-245a-4096-ae43-6d1a53675181}</destination>
@@ -342,6 +348,9 @@
 		</property>
 		<property name="length">
 			<value>121.36489795918368</value>
+		</property>
+		<property name="volume">
+			<value>-7.5</value>
 		</property>
 		<relationship name="audioFile">
 			<destination>{8c56b294-deb1-4517-b64f-9149d4484b6c}</destination>
@@ -416,7 +425,7 @@
 	</object>
 	<object class="TransitionSourceSound" id="{3abbe69f-e95e-4401-92b0-17ac4a498e27}">
 		<property name="length">
-			<value>2</value>
+			<value>4</value>
 		</property>
 		<relationship name="fadeOutCurve">
 			<destination>{ae25f5f3-5b2f-4777-8cc0-4746d103bee9}</destination>
@@ -1348,7 +1357,7 @@
 	</object>
 	<object class="AutomationPoint" id="{16f61a36-d81c-4650-b286-4fa5a959b2aa}">
 		<property name="position">
-			<value>2</value>
+			<value>4</value>
 		</property>
 		<property name="value">
 			<value>0</value>
@@ -1362,12 +1371,12 @@
 			<value>0</value>
 		</property>
 		<property name="curveShape">
-			<value>-0.2547189</value>
+			<value>0.0678842962</value>
 		</property>
 	</object>
 	<object class="AutomationPoint" id="{66e84a25-2f56-4bc5-bbaa-9fe5b5c80dd9}">
 		<property name="position">
-			<value>2</value>
+			<value>4</value>
 		</property>
 		<property name="value">
 			<value>1</value>

@@ -786,6 +786,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1293673133}
+  - component: {fileID: 1293673134}
   m_Layer: 0
   m_Name: AudioAmbience
   m_TagString: Untagged
@@ -801,13 +802,33 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1293673132}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -18.191551, y: -26.76822, z: 41.463394}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1293673134
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1293673132}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65bd4c10cd99a894283386da47339685, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tension: 0
+  ambientSound:
+    Guid:
+      Data1: -1144216389
+      Data2: 1189100546
+      Data3: -428361080
+      Data4: 930090139
+    Path: event:/Ambient/Ambient
 --- !u!1 &1437151153
 GameObject:
   m_ObjectHideFlags: 0
@@ -1251,5 +1272,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2544341805964655293, guid: 875b1ecd19ea08748a171f6cb7bfdc8b, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 875b1ecd19ea08748a171f6cb7bfdc8b, type: 3}
