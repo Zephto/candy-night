@@ -8,6 +8,10 @@ using UnityEngine.AI;
 /// </summary>
 public class EnemyController : MonoBehaviour {
 	
+	#region Classes references
+	private EnemyAudios _enemyAudios;
+	#endregion
+
 	#region Private variables
 	//Movement
 	private float stopDistance;
@@ -22,14 +26,15 @@ public class EnemyController : MonoBehaviour {
 	#endregion
 
 	void Awake() {
-		playerReference = GameObject.FindObjectOfType<CharacterActions>();
-		agent			= this.GetComponent<NavMeshAgent>();
-		enemyCollider	= this.GetComponent<Collider>();
+		_enemyAudios		= this.GetComponent<EnemyAudios>();
+		playerReference 	= GameObject.FindObjectOfType<CharacterActions>();
+		agent				= this.GetComponent<NavMeshAgent>();
+		enemyCollider		= this.GetComponent<Collider>();
 	}
 
 	void Start() {
 		agent.isStopped = true;
-		stopDistance = 5f;
+		stopDistance = 1f;
 	}
 
 	void Update() {
@@ -46,6 +51,7 @@ public class EnemyController : MonoBehaviour {
 				//El enemigo ha atacado
 				agent.isStopped = true;
 				playerReference.Kill(this.transform);
+				_enemyAudios.PlayScream();
 			}
 
 		}else{

@@ -59,13 +59,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 729637c2f403ffe4b94491961c1d3f77, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _step:
+  step:
     Guid:
       Data1: -1329755487
       Data2: 1305664207
       Data3: 604439684
       Data4: 1818237471
-    Path: event:/steps
+    Path: event:/Player/steps
 --- !u!114 &5342831350253197773
 MonoBehaviour:
   m_ObjectHideFlags: 0

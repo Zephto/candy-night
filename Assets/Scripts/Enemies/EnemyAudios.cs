@@ -1,18 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
+using FMODUnity;
 using UnityEngine;
 
-public class EnemyAudios : MonoBehaviour
-{
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+public class EnemyAudios : MonoBehaviour {
+	#region Fmod sounds
+	[SerializeField] private EventReference scream;
+	#endregion
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+	#region Public Methods
+	public void PlayScream() => RuntimeManager.PlayOneShot(scream, this.transform.position);
+	#endregion
 }

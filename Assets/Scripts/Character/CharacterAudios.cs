@@ -13,7 +13,7 @@ public class CharacterAudios : MonoBehaviour {
 	#endregion
 
 	#region Fmod sounds
-	[SerializeField] private EventReference _step;
+	[SerializeField] private EventReference step;
 	#endregion
 
 	void Awake() {
@@ -25,6 +25,6 @@ public class CharacterAudios : MonoBehaviour {
 	}
 
 	#region Public Methods
-	public void PlayStep() => RuntimeManager.PlayOneShot(_step, this.transform.position);
+	public void PlayStep() => RuntimeManager.PlayOneShot(step, this.transform.position);
 	#endregion
 }
