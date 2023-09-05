@@ -456,7 +456,7 @@ GameObject:
   - component: {fileID: 4459864851310106426}
   - component: {fileID: 166693663188717272}
   - component: {fileID: 552001131}
-  - component: {fileID: 552001133}
+  - component: {fileID: 3312686818654827267}
   m_Layer: 0
   m_Name: PlayerCamera
   m_TagString: MainCamera
@@ -554,7 +554,7 @@ MonoBehaviour:
   pickable: {fileID: 0}
   candyEstant: {fileID: 0}
   ArmBox: 0
---- !u!114 &552001133
+--- !u!114 &3312686818654827267
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -563,10 +563,42 @@ MonoBehaviour:
   m_GameObject: {fileID: 4459864851310106424}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
+  m_Script: {fileID: 11500000, guid: 86832f84a0cf34eb9b89129d49b7a15e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attenuationObject: {fileID: 0}
+  startConfig: {fileID: 11400000, guid: 6a4cfee667ae5420fbc0ff45d34bb1d5, type: 2}
+  crtRenderSettings: {fileID: 11400000, guid: 2d929546960894d169f1999a321e4ff4, type: 2}
+  _runtimeMaterial: {fileID: 0}
+  data:
+    pixelationAmount: 2
+    maxColorChannels:
+      red: 0
+      green: 0
+      blue: 0
+      greyScale: 0
+    dithering4: 0
+    dithering8: 0
+    vignette: 0.292
+    innerCurve: 20
+    monitorCurve: 0
+    monitorInnerSize:
+      width: 0
+      height: 0
+    monitorOutterSize:
+      width: 0.1
+      height: 0.1
+    zoom: 1.15
+    monitorRoundness: 0.2
+    monitorTexture: {fileID: 0}
+    monitorColor: {r: 0.121796034, g: 0.12775578, b: 0.16037738, a: 1}
+    innerMonitorDarkness: 0.215
+    innerMonitorShine: 0.01
+    colorScans:
+      greenChannelMultiplier: -0.355
+      redBlueChannelMultiplier: -0.334
+      sizeMultiplier: 3.06
+    innerMonitorShineRadius: -0.087
+    innerMonitorShineCurve: 10
 --- !u!1 &4459864851397454630
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{4a703db5-e0ce-432c-851d-a07afbd84e9b}">
+		<property name="assetPath">
+			<value>Ambience/678435__borgory__soft-rain-in-forest-raindrops-fall-on-leaves.wav</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>240.41666666666666</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{c4d8db74-fc69-40b6-a380-5a79492a0b43}</destination>
+		</relationship>
+	</object>
+</objects>

@@ -15,10 +15,10 @@ MonoBehaviour:
   Path: Fmod/candy-night-audios/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638293730670349216
+  lastModified: 638294710419352325
   FileSizes:
   - Name: 
-    Value: 1068
+    Value: 1142
   Exists: 1
 --- !u!114 &-6028820601727281888
 MonoBehaviour:
@@ -101,6 +101,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-559961600463094570
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Ambient/Rain
+  m_EditorClassIdentifier: 
+  Path: event:/Ambient/Rain
+  Guid:
+    Data1: 2085950179
+    Data2: 1319240490
+    Data3: 674877324
+    Data4: 209629946
+  Banks:
+  - {fileID: 3560937628706698467}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0.17999999
+  MaxDistance: 40
+  Length: 162416
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -123,12 +150,14 @@ MonoBehaviour:
   - {fileID: 780857091696231878}
   - {fileID: -6028820601727281888}
   - {fileID: 7916381857292720903}
+  - {fileID: 6464848205265428689}
+  - {fileID: -559961600463094570}
   EditorParameters: []
   MasterBanks:
   - {fileID: 3560937628706698467}
   StringsBanks:
   - {fileID: -7847547866248821800}
-  cacheTime: 638293730670349216
+  cacheTime: 638294710419352325
   cacheVersion: 131607
 --- !u!114 &780857091696231878
 MonoBehaviour:
@@ -172,7 +201,7 @@ MonoBehaviour:
   Path: Fmod/candy-night-audios/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638293730670309212
+  lastModified: 638294710419312323
   FileSizes: []
   Exists: 1
 --- !u!114 &5101426414860696942
@@ -199,6 +228,33 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
+--- !u!114 &6464848205265428689
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Ambient/Thunder
+  m_EditorClassIdentifier: 
+  Path: event:/Ambient/Thunder
+  Guid:
+    Data1: 939409297
+    Data2: 1184899437
+    Data3: -1401887321
+    Data4: 1726116639
+  Banks:
+  - {fileID: 3560937628706698467}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &7916381857292720903
 MonoBehaviour:
   m_ObjectHideFlags: 0

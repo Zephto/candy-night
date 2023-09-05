@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{24d40474-c1ee-4ca3-b180-49e60e523e38}">
+		<property name="assetPath">
+			<value>Ambience/Thunders/446753__bluedelta__heavy-thunder-strike-no-rain-quadro.wav</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>4</value>
+		</property>
+		<property name="length">
+			<value>62.001291666666667</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{c4d8db74-fc69-40b6-a380-5a79492a0b43}</destination>
+		</relationship>
+	</object>
+</objects>

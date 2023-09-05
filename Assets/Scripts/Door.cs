@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Door : MonoBehaviour
 {
-    public Transform Cam;
+    private Transform Cam;
 
     public float rayDistance;
 
@@ -15,9 +15,8 @@ public class Door : MonoBehaviour
     public bool OpenDoor;
 
     // Start is called before the first frame update
-    void Start()
-    {
-        
+    void Start() {
+        Cam = Camera.main.transform;
     }
 
     // Update is called once per frame
