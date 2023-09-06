@@ -5340,6 +5340,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 864264741901964895, guid: 6bacecc4f3df9584198879c73a6b6c36, type: 3}
+      propertyPath: grab.Path
+      value: event:/Player/Grab
+      objectReference: {fileID: 0}
+    - target: {fileID: 864264741901964895, guid: 6bacecc4f3df9584198879c73a6b6c36, type: 3}
+      propertyPath: grab.Guid.Data1
+      value: 730432827
+      objectReference: {fileID: 0}
+    - target: {fileID: 864264741901964895, guid: 6bacecc4f3df9584198879c73a6b6c36, type: 3}
+      propertyPath: grab.Guid.Data2
+      value: 1160698623
+      objectReference: {fileID: 0}
+    - target: {fileID: 864264741901964895, guid: 6bacecc4f3df9584198879c73a6b6c36, type: 3}
+      propertyPath: grab.Guid.Data3
+      value: 245699770
+      objectReference: {fileID: 0}
+    - target: {fileID: 864264741901964895, guid: 6bacecc4f3df9584198879c73a6b6c36, type: 3}
+      propertyPath: grab.Guid.Data4
+      value: 608955725
+      objectReference: {fileID: 0}
     - target: {fileID: 3312686818654827267, guid: 6bacecc4f3df9584198879c73a6b6c36, type: 3}
       propertyPath: _runtimeMaterial
       value: 

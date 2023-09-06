@@ -14,6 +14,7 @@ public class CharacterAudios : MonoBehaviour {
 
 	#region Fmod sounds
 	[SerializeField] private EventReference step;
+	[SerializeField] private EventReference grab;
 	[SerializeField] private EventReference breathing;
 	private EventInstance breathingInstance;
 	private bool isBreathingPlay = false;
@@ -43,7 +44,8 @@ public class CharacterAudios : MonoBehaviour {
 
 	#region Public Methods
 	public void PlayStep() => RuntimeManager.PlayOneShot(step, this.transform.position);
-	
+	public void PlayGrab() => RuntimeManager.PlayOneShot(grab, this.transform.position);
+
 	public void PlayBreathing(bool isSprinting){
 		
 		if(isSprinting && isBreathingPlay == false){

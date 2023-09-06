@@ -6,7 +6,6 @@ public class GameManager : MonoBehaviour
 {
     public GameObject CamNota;
     public GameObject Player;
-
     public bool NotaStart = true;
 
     // Start is called before the first frame update

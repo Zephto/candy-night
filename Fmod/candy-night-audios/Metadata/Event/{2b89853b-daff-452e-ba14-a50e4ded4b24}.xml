@@ -80,6 +80,9 @@
 		</relationship>
 	</object>
 	<object class="EventMixerMaster" id="{f2e8616b-3444-46f6-acd1-be442bb05b72}">
+		<property name="volume">
+			<value>-4.5</value>
+		</property>
 		<relationship name="effectChain">
 			<destination>{7ce8a25c-b1f4-4d36-a1fe-9d65edd22387}</destination>
 		</relationship>
@@ -129,7 +132,7 @@
 	<object class="MixerBusPanner" id="{371ce1a4-a266-4dba-a9f9-4959b3837c4d}" />
 	<object class="MultiSound" id="{dcb705ca-0b63-44d6-a82d-c3a35c40af87}">
 		<property name="volume">
-			<value>-5</value>
+			<value>-7</value>
 		</property>
 		<relationship name="sounds">
 			<destination>{7157779d-03d2-4d65-94c4-68857b7a92e3}</destination>
@@ -140,7 +143,7 @@
 	</object>
 	<object class="MultiSound" id="{a0b9e3b1-5f3b-4609-b297-b875b3461407}">
 		<property name="volume">
-			<value>-18.5</value>
+			<value>-28</value>
 		</property>
 		<relationship name="sounds">
 			<destination>{8ee83933-59d6-490b-8006-3d31520948ae}</destination>
@@ -159,7 +162,7 @@
 	<object class="SpatialiserEffect" id="{5368aec8-e9c7-4574-b465-f42a5fb8cb67}" />
 	<object class="SFXReverbEffect" id="{8175679c-202e-41e5-8b86-c00da1fdfecd}">
 		<property name="decayTime">
-			<value>900</value>
+			<value>550</value>
 		</property>
 		<property name="wetLevel">
 			<value>-4</value>

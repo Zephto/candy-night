@@ -6,10 +6,11 @@ using UnityEngine;
 /// Componente usado para controlar varias cosas del player
 /// </summary>
 public class CharacterController : MonoBehaviour {
-	
+
 	#region Public variables
 	public GameObject zoneArm;
 	[HideInInspector] public CameraInteraction cameraInteraction;
+	[HideInInspector] public CharacterAudios audios;
 	#endregion
 
 	#region Private variables
@@ -18,6 +19,7 @@ public class CharacterController : MonoBehaviour {
 
 	void Awake() {
 		player				= this.GetComponent<FirstPersonController>();
+		audios				= this.GetComponent<CharacterAudios>();
 		cameraInteraction	= this.GetComponentInChildren<CameraInteraction>();
 	}
 

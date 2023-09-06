@@ -97,6 +97,13 @@ MonoBehaviour:
       Data3: 604439684
       Data4: 1818237471
     Path: event:/Player/Steps
+  grab:
+    Guid:
+      Data1: 730432827
+      Data2: 1160698623
+      Data3: 245699770
+      Data4: 608955725
+    Path: event:/Player/Grab
   breathing:
     Guid:
       Data1: -172325922
@@ -118,6 +125,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   zoneArm: {fileID: 787227841}
   cameraInteraction: {fileID: 0}
+  audios: {fileID: 0}
 --- !u!23 &4459864850019384736
 MeshRenderer:
   m_ObjectHideFlags: 0
