@@ -63,8 +63,8 @@ Transform:
   m_GameObject: {fileID: 4459864850019384750}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 2, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 4459864851508666808}
   m_Father: {fileID: 0}
@@ -97,6 +97,13 @@ MonoBehaviour:
       Data3: 604439684
       Data4: 1818237471
     Path: event:/Player/Steps
+  breathing:
+    Guid:
+      Data1: -172325922
+      Data2: 1210993681
+      Data3: 560224925
+      Data4: 1180148796
+    Path: event:/Player/Breath
 --- !u!114 &5342831350253197773
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -213,7 +220,7 @@ MonoBehaviour:
   walkSpeed: 5
   maxVelocityChange: 10
   enableSprint: 1
-  unlimitedSprint: 1
+  unlimitedSprint: 0
   sprintKey: 304
   sprintSpeed: 7
   sprintDuration: 5
@@ -226,6 +233,9 @@ MonoBehaviour:
   sprintBar: {fileID: 4459864850888339820}
   sprintBarWidthPercent: 0.3
   sprintBarHeightPercent: 0.02
+  OnSprint:
+    m_PersistentCalls:
+      m_Calls: []
   enableJump: 0
   jumpKey: 32
   jumpPower: 5
@@ -566,7 +576,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86832f84a0cf34eb9b89129d49b7a15e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startConfig: {fileID: 11400000, guid: 6a4cfee667ae5420fbc0ff45d34bb1d5, type: 2}
+  startConfig: {fileID: 0}
   crtRenderSettings: {fileID: 11400000, guid: 2d929546960894d169f1999a321e4ff4, type: 2}
   _runtimeMaterial: {fileID: 0}
   data:

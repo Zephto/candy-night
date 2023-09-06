@@ -15,11 +15,39 @@ MonoBehaviour:
   Path: Fmod/candy-night-audios/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638295468750469314
+  lastModified: 638295501080913620
   FileSizes:
   - Name: 
-    Value: 1142
+    Value: 1230
   Exists: 1
+--- !u!114 &-7242439519434203105
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Player/Breath
+  m_EditorClassIdentifier: 
+  Path: event:/Player/Breath
+  Guid:
+    Data1: -172325922
+    Data2: 1210993681
+    Data3: 560224925
+    Data4: 1180148796
+  Banks:
+  - {fileID: 3560937628706698467}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 0
+  Parameters:
+  - {fileID: -3112940373111869781}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 4000
 --- !u!114 &-6028820601727281888
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -74,6 +102,30 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-3112940373111869781
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Breath/isSprint
+  m_EditorClassIdentifier: 
+  Name: isSprint
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 3704716184
+    data2: 942338497
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &-2488295592721321507
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -152,12 +204,13 @@ MonoBehaviour:
   - {fileID: 7916381857292720903}
   - {fileID: 6464848205265428689}
   - {fileID: -559961600463094570}
+  - {fileID: -7242439519434203105}
   EditorParameters: []
   MasterBanks:
   - {fileID: 3560937628706698467}
   StringsBanks:
   - {fileID: -7847547866248821800}
-  cacheTime: 638295468750469314
+  cacheTime: 638295501080913620
   cacheVersion: 131607
 --- !u!114 &780857091696231878
 MonoBehaviour:
@@ -201,7 +254,7 @@ MonoBehaviour:
   Path: Fmod/candy-night-audios/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638295468750446164
+  lastModified: 638295501080883595
   FileSizes: []
   Exists: 1
 --- !u!114 &5101426414860696942

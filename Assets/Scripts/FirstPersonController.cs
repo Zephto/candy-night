@@ -92,6 +92,7 @@ public class FirstPersonController : MonoBehaviour
     private bool isSprintCooldown = false;
     private float sprintCooldownReset;
 
+    public UnityEvent<bool> OnSprint = new UnityEvent<bool>();
     #endregion
 
     #region Jump
@@ -284,15 +285,22 @@ public class FirstPersonController : MonoBehaviour
             {
                 isZoomed = false;
                 playerCamera.fieldOfView = Mathf.Lerp(playerCamera.fieldOfView, sprintFOV, sprintFOVStepTime * Time.deltaTime);
+                OnSprint?.Invoke(true);
 
                 // Drain sprint remaining while sprinting
                 if(!unlimitedSprint)
                 {
                     sprintRemaining -= 1 * Time.deltaTime;
+
+                    // if(sprintRemaining <= 0.5f){
+                    //     OnSprint?.Invoke(true);
+                    // }
+
                     if (sprintRemaining <= 0)
                     {
                         isSprinting = false;
                         isSprintCooldown = true;
+                        OnSprint?.Invoke(isSprintCooldown);
                     }
                 }
             }
@@ -310,6 +318,7 @@ public class FirstPersonController : MonoBehaviour
                 if (sprintCooldown <= 0)
                 {
                     isSprintCooldown = false;
+                    OnSprint?.Invoke(isSprintCooldown);
                 }
             }
             else

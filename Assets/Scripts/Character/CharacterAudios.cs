@@ -14,6 +14,9 @@ public class CharacterAudios : MonoBehaviour {
 
 	#region Fmod sounds
 	[SerializeField] private EventReference step;
+	[SerializeField] private EventReference breathing;
+	private EventInstance breathingInstance;
+	private bool isBreathingPlay = false;
 	#endregion
 
 	void Awake() {
@@ -22,9 +25,37 @@ public class CharacterAudios : MonoBehaviour {
 
 	void Start() {
 		_character.OnStep.AddListener(()=>PlayStep());
+		_character.OnSprint.AddListener((value)=>PlayBreathing(value));
+
+		//breathing instance
+		breathingInstance = RuntimeManager.CreateInstance(breathing);
+		//breathingInstance.set3DAttributes(RuntimeUtils.To3DAttributes(this.gameObject));
+		isBreathingPlay = false;
+	}
+
+	void OnDestroy() {
+		breathingInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+	}
+
+	void Update() {
+		breathingInstance.set3DAttributes(RuntimeUtils.To3DAttributes(this.gameObject));
 	}
 
 	#region Public Methods
 	public void PlayStep() => RuntimeManager.PlayOneShot(step, this.transform.position);
+	
+	public void PlayBreathing(bool isSprinting){
+		
+		if(isSprinting && isBreathingPlay == false){
+			Debug.Log("==> sprinnn");
+			breathingInstance.setParameterByName("isSprint", 0);
+			breathingInstance.start();
+			isBreathingPlay = true;
+		}else{
+			Debug.Log("falseeee");
+			breathingInstance.setParameterByName("isSprint", 1);
+			isBreathingPlay = false;
+		}
+	}
 	#endregion
 }
