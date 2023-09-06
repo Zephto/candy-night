@@ -2,28 +2,28 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Pickable : Interactable
-{
+public class Pickable : Interactable {
 
-    public Transform zoneArm;
-    public Rigidbody rb;
-    public Collider coll;
+    #region Private variables
+    private CharacterController playerReference;
+    private Collider coll;
+    private Rigidbody rb;
+    #endregion
 
-    public CandyEstant candyEstant;
-    public CameraInteraction cameraInteraction;
-
+    public CandyEstant candyEstantReference;
     public int CantidadDeDulces;
 
-    private void Start()
-    {
-        
+    void Awake() {
+        playerReference = GameObject.FindObjectOfType<CharacterController>();
+        coll            = this.GetComponent<Collider>();
+        rb              = this.GetComponent<Rigidbody>();
     }
 
     private void Update()
     {
         if(CantidadDeDulces == 0)
         {
-            cameraInteraction.ArmBox = false;
+            playerReference.cameraInteraction.ArmBox = false;
             Destroy(gameObject);
         }
     }
@@ -32,15 +32,15 @@ public class Pickable : Interactable
     {
         base.Interact();
 
-        transform.SetParent(zoneArm);
+        transform.SetParent(playerReference.zoneArm.transform);
         transform.position = new Vector3(0,0,0);
         transform.rotation = new Quaternion(0,0,0,0);
-        transform.position = zoneArm.position;
+        transform.position = playerReference.zoneArm.transform.position;
+
+        //Set estant reference where the player needs to put the candy bags
+        playerReference.cameraInteraction.SetEstant(candyEstantReference.gameObject);
         
         rb.isKinematic = true; coll.enabled = false; rb.useGravity = false;
-
-        
-
     }
 
 }

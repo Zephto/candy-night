@@ -2,33 +2,30 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CameraInteraction : MonoBehaviour
-{
+/// <summary>
+/// Componente que se usa para controlar las interacciones con raycast
+/// </summary>
+public class CameraInteraction : MonoBehaviour {
 
+    #region Public variables
     public Transform Cam;
-
     public float rayDistance;
-
-    public Pickable pickable;
-    public CandyEstant candyEstant;
-
     public bool ArmBox;
-
     public RaycastHit hit;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    #endregion
+    
+    #region Private variables
+    //private CandyEstant candyEstant;
+    private string candyEstantId;
+    private Pickable pickable;
+    #endregion
+    
 
-    // Update is called once per frame
-    void Update()
-    {
+    void Update(){
         Debug.DrawRay(Cam.position, Cam.forward * rayDistance, Color.red);
 
         if(Input.GetMouseButtonDown(0))
         {          
-
             if (Physics.Raycast(Cam.position, Cam.forward, out hit, rayDistance, LayerMask.GetMask("Interactable")))
             {
                 Debug.Log(hit.transform.name);
@@ -41,13 +38,25 @@ public class CameraInteraction : MonoBehaviour
             {       
                 if(ArmBox)
                 {
-                    Debug.Log(hit.transform.name);
-                    candyEstant.SpawnCandy(pickable.CantidadDeDulces);
-                    pickable.CantidadDeDulces--;
-                }
-                                           
+                    var estantParent = hit.transform.GetComponentInParent<CandyEstant>();
+                    if(estantParent.gameObject.GetInstanceID().ToString() == candyEstantId){
+                        Debug.Log(hit.transform.name);
+                        estantParent.SpawnCandy(hit.collider.transform);
+                        pickable.CantidadDeDulces--;
+                        hit.collider.enabled = false;
+                    }else{
+                        Debug.Log("Es otro estanteeee");
+                    }
+
+                }                  
             }
         }
-        
     }
+
+    #region Private Methods
+    public void SetEstant(GameObject candyEstantRef ){//CandyEstant candyEstantRef){
+        //candyEstant = candyEstantRef;
+        candyEstantId = candyEstantRef.gameObject.GetInstanceID().ToString();
+    }
+    #endregion
 }

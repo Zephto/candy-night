@@ -9,6 +9,7 @@ public class CharacterController : MonoBehaviour {
 	
 	#region Public variables
 	public GameObject zoneArm;
+	[HideInInspector] public CameraInteraction cameraInteraction;
 	#endregion
 
 	#region Private variables
@@ -16,7 +17,8 @@ public class CharacterController : MonoBehaviour {
 	#endregion
 
 	void Awake() {
-		player = this.GetComponent<FirstPersonController>();
+		player				= this.GetComponent<FirstPersonController>();
+		cameraInteraction	= this.GetComponentInChildren<CameraInteraction>();
 	}
 
 	#region Public Methods

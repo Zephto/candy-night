@@ -524,6 +524,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2310799823210032990}
   - component: {fileID: 2310799823210032991}
+  - component: {fileID: 5544835663913631478}
   m_Layer: 0
   m_Name: EstanteriaAlmacen
   m_TagString: Untagged
@@ -561,6 +562,20 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.50950277, y: 1.864927, z: 1.5205259}
   m_Center: {x: 0, y: 0.98, z: 0}
+--- !u!114 &5544835663913631478
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2310799823210032988}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 829b1057ec948a94ebc038541f89dbab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Candy: {fileID: 3131897408824174817, guid: f1bf192dd06de0d41bb3416b5d93470a, type: 3}
+  PositionsContainer: {fileID: 2310799823382985144}
 --- !u!1 &2310799823301073831
 GameObject:
   m_ObjectHideFlags: 0
@@ -615,7 +630,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2310799823382985147}
-  - component: {fileID: 2310799823382985146}
   m_Layer: 0
   m_Name: Positions
   m_TagString: Untagged
@@ -647,22 +661,6 @@ Transform:
   m_Father: {fileID: 2310799823210032990}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2310799823382985146
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2310799823382985144}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 829b1057ec948a94ebc038541f89dbab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Candy: {fileID: 3131897408824174817, guid: f1bf192dd06de0d41bb3416b5d93470a, type: 3}
-  PositionsCandy: []
-  CantidadDeDulces: 9
-  cameraInteraction: {fileID: 0}
 --- !u!1 &2310799823644186165
 GameObject:
   m_ObjectHideFlags: 0
