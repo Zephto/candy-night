@@ -2,15 +2,38 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GameManager : MonoBehaviour
-{
+/// <summary>
+/// Controlador principal del juego
+/// </summary>
+public class GameManager : MonoBehaviour {
+
+    public static GameManager Instance;
+
+    #region Public variables
+    [Header("General references")]
     public GameObject CamNota;
     public GameObject Player;
     public bool NotaStart = true;
+    
+    [Header("Piñatas references")]
+    public EnemyController firstPinata;
+    #endregion
 
-    // Start is called before the first frame update
-    void Start()
-    {
+    #region Private variables
+    private int score = 0;
+    #endregion
+
+    void Awake() {
+        if(Instance == null){
+            Instance = this;
+        }else{
+            Destroy(this.gameObject);
+        }
+    }
+
+    void Start() {
+        score = 0;
+        
         CamNota.SetActive(true);
         Player.SetActive(false);
     }
@@ -27,5 +50,13 @@ public class GameManager : MonoBehaviour
             }
             
         }
+
+        if(score >= 5){
+            firstPinata.CanMove(true);
+        }
     }
+
+    #region Public Methods
+    public void AddScore() => score++;
+    #endregion
 }

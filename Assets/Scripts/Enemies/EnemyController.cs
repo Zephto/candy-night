@@ -35,6 +35,7 @@ public class EnemyController : Interactable {
 	void Start() {
 		agent.isStopped = true;
 		stopDistance = 1f;
+		agent.enabled = false;
 
 		InvokeRepeating("PlaySteps", 0f, 1f);
 	}
@@ -77,6 +78,12 @@ public class EnemyController : Interactable {
 			playerReference.zoneArm.transform.position.y - 0.5f,
 			playerReference.zoneArm.transform.position.z + 1f
 		);
+	}
+	#endregion
+
+	#region Public Methods
+	public void CanMove(bool set){
+		agent.enabled = set;
 	}
 	#endregion
 

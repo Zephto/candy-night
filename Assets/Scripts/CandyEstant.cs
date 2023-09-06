@@ -22,5 +22,6 @@ public class CandyEstant : MonoBehaviour
     public void SpawnCandy(Transform transform)
     {
         Instantiate(Candy, transform);
+        GameManager.Instance.AddScore();
     }
 }
