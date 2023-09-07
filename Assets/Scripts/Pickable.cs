@@ -38,7 +38,7 @@ public class Pickable : Interactable {
         transform.position = playerReference.zoneArm.transform.position;
 
         //Set estant reference where the player needs to put the candy bags
-        playerReference.cameraInteraction.SetEstant(candyEstantReference.gameObject);
+        //playerReference.cameraInteraction.SetEstant(candyEstantReference.gameObject);
         playerReference.audios.PlayGrab();
         
         rb.isKinematic = true; coll.enabled = false; rb.useGravity = false;

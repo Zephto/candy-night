@@ -39,14 +39,14 @@ public class CameraInteraction : MonoBehaviour {
                 if(ArmBox)
                 {
                     var estantParent = hit.transform.GetComponentInParent<CandyEstant>();
-                    if(estantParent.gameObject.GetInstanceID().ToString() == candyEstantId){
+                    //if(estantParent.gameObject.GetInstanceID().ToString() == candyEstantId){
                         Debug.Log(hit.transform.name);
                         estantParent.SpawnCandy(hit.collider.transform);
                         pickable.CantidadDeDulces--;
                         hit.collider.enabled = false;
-                    }else{
+                    //}else{
                         Debug.Log("Es otro estanteeee");
-                    }
+                    //}
 
                 }                  
             }
