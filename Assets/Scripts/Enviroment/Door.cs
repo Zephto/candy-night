@@ -8,15 +8,16 @@ public class Door : MonoBehaviour
 
     public float rayDistance;
 
-    public Animator aniPuerta;
+    private Animator aniPuerta;
 
     public bool puertaActiv = true;
 
     public bool OpenDoor;
 
     // Start is called before the first frame update
-    void Start() {
-        
+    void Start() 
+    {
+        aniPuerta = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -34,7 +35,7 @@ public class Door : MonoBehaviour
 
                 if(puertaActiv == true && OpenDoor == true)
                 {
-                    aniPuerta.Play("DoorClose");
+                    aniPuerta.SetBool("DoorOpen", false);
                     puertaActiv = false;
                     OpenDoor = false;
                     Invoke("DoorBool", 1f);
@@ -42,7 +43,7 @@ public class Door : MonoBehaviour
 
                 if(puertaActiv == false && OpenDoor == true)
                 {
-                    aniPuerta.Play("DoorOpen");
+                    aniPuerta.SetBool("DoorOpen", true);
                     puertaActiv = true;
                     OpenDoor = false;
                     Invoke("DoorBool", 1f);
