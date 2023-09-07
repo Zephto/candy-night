@@ -15,12 +15,16 @@ public class GameManager : MonoBehaviour {
     public GameObject Player;
     public bool NotaStart = true;
     
+    [Header("Enviroment references")]
+    public GameObject lightsContainer;
+
     [Header("Piñatas references")]
-    public EnemyController firstPinata;
+    public EnemyController[] pinatas;
     #endregion
 
     #region Private variables
     private int score = 0;
+    private int gameEvent = 0;
     #endregion
 
     void Awake() {
@@ -32,6 +36,7 @@ public class GameManager : MonoBehaviour {
     }
 
     void Start() {
+        gameEvent = 0;
         score = 0;
         
         CamNota.SetActive(true);
@@ -51,8 +56,26 @@ public class GameManager : MonoBehaviour {
             
         }
 
-        if(score >= 5){
-            firstPinata.CanMove(true);
+        //25
+        if(score >= 10 && gameEvent == 0){
+            gameEvent++;
+
+            foreach(Transform lightObject in lightsContainer.transform){
+                var lightComponent = lightObject.GetComponent<LightsBehaviour>();
+                lightComponent.TurnOff();
+            }
+        }
+        if(score >= 15 && gameEvent == 1){
+            gameEvent++;
+            pinatas[0].CanMove(true);
+        }
+        if(score >= 20 && gameEvent == 2){
+            gameEvent++;
+            pinatas[1].CanMove(true);
+        }
+        if(score >= 25 && gameEvent == 3){
+            gameEvent++;
+            pinatas[2].CanMove(true);
         }
     }
 

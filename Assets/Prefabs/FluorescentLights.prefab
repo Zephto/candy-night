@@ -124,6 +124,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6689975706309939318}
+  - component: {fileID: 5237193539205011208}
   - component: {fileID: 6689975706309939319}
   - component: {fileID: 6689975706309939316}
   - component: {fileID: 6689975706309939317}
@@ -151,6 +152,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5237193539205011208
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6689975706309939211}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68f11e18b9cdd1c4f8eb2ef71565824e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  normalLights: {fileID: 2100000, guid: 1df798ed937ea854d986b44e0de57af4, type: 2}
+  damageLights: {fileID: 2100000, guid: a6bfbf5aa8fc8b04c8af620b138e5280, type: 2}
+  lightReference: {fileID: 6022595152602003355}
 --- !u!114 &6689975706309939319
 MonoBehaviour:
   m_ObjectHideFlags: 0
