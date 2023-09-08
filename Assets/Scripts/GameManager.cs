@@ -16,6 +16,7 @@ public class GameManager : MonoBehaviour {
     public bool NotaStart = true;
     
     [Header("Enviroment references")]
+    public ParticleSystem fogSystem;
     public GameObject lightsContainer;
     public GameObject[] sceneLights;
     public GameObject[] nocturnalLights;
@@ -84,6 +85,7 @@ public class GameManager : MonoBehaviour {
         if(score >= 20 && gameEvent == 2){
             gameEvent++;
             pinatas[1].CanMove(true);
+            fogSystem.Play();
         }
         if(score >= 25 && gameEvent == 3){
             gameEvent++;
