@@ -9,7 +9,7 @@ public class LightsBehaviour : MonoBehaviour {
 	#region Public references
 	[SerializeField] private Material normalLights;
 	[SerializeField] private Material damageLights;
-	[SerializeField] private GameObject lightReference;
+	// [SerializeField] private GameObject lightReference;
 	#endregion
 	
 	#region private references
@@ -26,13 +26,13 @@ public class LightsBehaviour : MonoBehaviour {
 	public void TurnOn(){
 		spatialSoundRef.enabled = true;
 		meshRenderer.material = normalLights;
-		lightReference.SetActive(true);
+		// lightReference.SetActive(true);
 	}
 
 	public void TurnOff(){
 		spatialSoundRef.enabled = false;
 		meshRenderer.material = damageLights;
-		lightReference.SetActive(false);
+		// lightReference.SetActive(false);
 	}
 	#endregion
 }

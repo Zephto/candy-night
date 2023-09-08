@@ -17,6 +17,7 @@ public class GameManager : MonoBehaviour {
     
     [Header("Enviroment references")]
     public GameObject lightsContainer;
+    public GameObject[] sceneLights;
 
     [Header("Piñatas references")]
     public EnemyController[] pinatas;
@@ -64,6 +65,8 @@ public class GameManager : MonoBehaviour {
                 var lightComponent = lightObject.GetComponent<LightsBehaviour>();
                 lightComponent.TurnOff();
             }
+
+            foreach(var light in sceneLights) light.SetActive(false);
         }
         if(score >= 15 && gameEvent == 1){
             gameEvent++;
