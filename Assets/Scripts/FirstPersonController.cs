@@ -308,6 +308,10 @@ public class FirstPersonController : MonoBehaviour
             {
                 // Regain sprint while not sprinting
                 sprintRemaining = Mathf.Clamp(sprintRemaining += 1 * Time.deltaTime, 0, sprintDuration);
+
+                if(sprintRemaining >= sprintDuration){
+                    OnSprint?.Invoke(false);
+                }
             }
 
             // Handles sprint cooldown 
@@ -318,7 +322,7 @@ public class FirstPersonController : MonoBehaviour
                 if (sprintCooldown <= 0)
                 {
                     isSprintCooldown = false;
-                    OnSprint?.Invoke(isSprintCooldown);
+                    // OnSprint?.Invoke(isSprintCooldown);
                 }
             }
             else
