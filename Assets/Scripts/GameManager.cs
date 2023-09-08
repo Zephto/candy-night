@@ -18,6 +18,8 @@ public class GameManager : MonoBehaviour {
     [Header("Enviroment references")]
     public GameObject lightsContainer;
     public GameObject[] sceneLights;
+    public GameObject[] nocturnalLights;
+    public LightsEmergencyBehaviour[] emergencyLights;
 
     [Header("Piñatas references")]
     public EnemyController[] pinatas;
@@ -40,8 +42,13 @@ public class GameManager : MonoBehaviour {
         gameEvent = 0;
         score = 0;
         
-        CamNota.SetActive(true);
-        Player.SetActive(false);
+        if(CamNota != null){
+            CamNota.SetActive(true);
+            Player.SetActive(false);
+        }
+
+        foreach(var elight in emergencyLights) elight.TurnOff();
+        foreach(var nlight in nocturnalLights) nlight.SetActive(false);
     }
 
     // Update is called once per frame
@@ -66,7 +73,9 @@ public class GameManager : MonoBehaviour {
                 lightComponent.TurnOff();
             }
 
+            foreach(var nlight in nocturnalLights) nlight.SetActive(true);
             foreach(var light in sceneLights) light.SetActive(false);
+            foreach(var elight in emergencyLights) elight.TurnOn();
         }
         if(score >= 15 && gameEvent == 1){
             gameEvent++;

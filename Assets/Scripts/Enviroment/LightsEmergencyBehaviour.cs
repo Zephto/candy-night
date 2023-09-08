@@ -1,5 +1,7 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Mathematics;
 using UnityEngine;
 
 /// <summary>
@@ -9,12 +11,14 @@ public class LightsEmergencyBehaviour : MonoBehaviour {
 	#region Public references
 	[SerializeField] private Material normalLights;
 	[SerializeField] private Material damageLights;
-	// [SerializeField] private GameObject lightReference;
+	[SerializeField] private Light lightReference;
 	#endregion
 	
 	#region private references
 	private SpatialSound spatialSoundRef;
 	private MeshRenderer meshRenderer;
+	private float intensityRef;
+	private bool isOn;
 	#endregion
 
 	void Awake() {
@@ -22,17 +26,32 @@ public class LightsEmergencyBehaviour : MonoBehaviour {
 		meshRenderer = this.GetComponent<MeshRenderer>();
 	}
 
+	void Start() {
+		intensityRef = lightReference.intensity;
+		isOn = false;
+	}
+
 	#region Public Methods
 	public void TurnOn(){
 		spatialSoundRef.enabled = true;
 		meshRenderer.material = normalLights;
-		// lightReference.SetActive(true);
+		lightReference.gameObject.SetActive(true);
+		isOn = true;
 	}
 
 	public void TurnOff(){
 		spatialSoundRef.enabled = false;
 		meshRenderer.material = damageLights;
-		// lightReference.SetActive(false);
+		lightReference.gameObject.SetActive(false);
+		isOn = false;
+		Debug.Log("APAGA EMERGENICA");
 	}
 	#endregion
+
+	void Update() {
+		if(isOn){
+			var time = Mathf.PingPong(Time.time * 0.3f, 1f);
+			lightReference.intensity = Mathf.Lerp(0f, intensityRef, time);
+		}
+	}
 }
