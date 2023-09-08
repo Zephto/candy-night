@@ -31,23 +31,28 @@ public class Door : MonoBehaviour
 
             if (Physics.Raycast(Cam.position, Cam.forward, out hit, rayDistance, LayerMask.GetMask("Door")))
             {
-                Debug.Log("Click");
+                Debug.Log("Click in: " + this.gameObject);
+                Debug.Log("hit door: "+ hit.transform.gameObject);
 
-                if(puertaActiv == true && OpenDoor == true)
-                {
-                    aniPuerta.SetBool("DoorOpen", false);
-                    puertaActiv = false;
-                    OpenDoor = false;
-                    Invoke("DoorBool", 1f);
+                if(this.gameObject == hit.transform.GetComponentInParent<Door>().gameObject){
+
+                    if(puertaActiv == true && OpenDoor == true)
+                    {
+                        aniPuerta.SetBool("DoorOpen", false);
+                        puertaActiv = false;
+                        OpenDoor = false;
+                        Invoke("DoorBool", 1f);
+                    }
+
+                    if(puertaActiv == false && OpenDoor == true)
+                    {
+                        aniPuerta.SetBool("DoorOpen", true);
+                        puertaActiv = true;
+                        OpenDoor = false;
+                        Invoke("DoorBool", 1f);
+                    }
                 }
 
-                if(puertaActiv == false && OpenDoor == true)
-                {
-                    aniPuerta.SetBool("DoorOpen", true);
-                    puertaActiv = true;
-                    OpenDoor = false;
-                    Invoke("DoorBool", 1f);
-                }
             }
         }
 
