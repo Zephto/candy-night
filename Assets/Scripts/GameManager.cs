@@ -87,7 +87,7 @@ public class GameManager : MonoBehaviour {
         }
 
         //25
-        if(score >= 20 && gameEvent == 0){
+        if(score >= 30 && gameEvent == 0){
             gameEvent++;
 
             powerDown.Play();
@@ -99,26 +99,27 @@ public class GameManager : MonoBehaviour {
             foreach(var nlight in nocturnalLights) nlight.SetActive(true);
             foreach(var light in sceneLights) light.SetActive(false);
             foreach(var elight in emergencyLights) elight.TurnOn();
+            foreach(var phoneAudio in phoneBossAudios) phoneAudio.Play();
         }
 
-        if(score >= 30 && gameEvent == 1){
+        if(score >= 40 && gameEvent == 1){
             gameEvent++;
             pinatas[0].CanMove(true);
             ambient.tension = 1;
         }
 
-        if(score >= 40 && gameEvent == 2){
+        if(score >= 50 && gameEvent == 2){
             gameEvent++;
             fogSystem.Play();
             ambient.tension = 1;
         }
 
-        if(score >= 50 && gameEvent == 3){
+        if(score >= 60 && gameEvent == 3){
             gameEvent++;
             pinatas[1].CanMove(true);
         }
 
-        if(score >= 60 && gameEvent == 4){
+        if(score >= 70 && gameEvent == 4){
             gameEvent++;
             pinatas[2].CanMove(true);
             ambient.tension = 2;

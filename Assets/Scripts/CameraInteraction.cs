@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.TextCore.Text;
 
 /// <summary>
 /// Componente que se usa para controlar las interacciones con raycast
@@ -16,10 +17,14 @@ public class CameraInteraction : MonoBehaviour {
     
     #region Private variables
     //private CandyEstant candyEstant;
+    private CharacterAudios characterAudios;
     private string candyEstantId;
     private Pickable pickable;
     #endregion
     
+    void Awake() {
+        characterAudios = this.GetComponentInParent<CharacterAudios>();
+    }
 
     void Update(){
         Debug.DrawRay(Cam.position, Cam.forward * rayDistance, Color.red);
@@ -44,6 +49,7 @@ public class CameraInteraction : MonoBehaviour {
                         estantParent.SpawnCandy(hit.collider.transform);
                         pickable.CantidadDeDulces--;
                         hit.collider.enabled = false;
+                        characterAudios.PlayPlace();
                     //}else{
                         Debug.Log("Es otro estanteeee");
                     //}

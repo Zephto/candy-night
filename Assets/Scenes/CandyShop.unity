@@ -32981,6 +32981,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 864264741901964895, guid: 6bacecc4f3df9584198879c73a6b6c36, type: 3}
+      propertyPath: place.Path
+      value: event:/Player/Place
+      objectReference: {fileID: 0}
+    - target: {fileID: 864264741901964895, guid: 6bacecc4f3df9584198879c73a6b6c36, type: 3}
+      propertyPath: place.Guid.Data1
+      value: -1776388820
+      objectReference: {fileID: 0}
+    - target: {fileID: 864264741901964895, guid: 6bacecc4f3df9584198879c73a6b6c36, type: 3}
+      propertyPath: place.Guid.Data2
+      value: 1211629709
+      objectReference: {fileID: 0}
+    - target: {fileID: 864264741901964895, guid: 6bacecc4f3df9584198879c73a6b6c36, type: 3}
+      propertyPath: place.Guid.Data3
+      value: -1408459339
+      objectReference: {fileID: 0}
+    - target: {fileID: 864264741901964895, guid: 6bacecc4f3df9584198879c73a6b6c36, type: 3}
+      propertyPath: place.Guid.Data4
+      value: -1781222909
+      objectReference: {fileID: 0}
     - target: {fileID: 4459864850019384738, guid: 6bacecc4f3df9584198879c73a6b6c36, type: 3}
       propertyPath: m_RootOrder
       value: 4
