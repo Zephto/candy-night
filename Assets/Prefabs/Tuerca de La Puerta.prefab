@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2216620836077861464}
   - component: {fileID: 2216620836077861470}
   - component: {fileID: 2216620836077861471}
+  - component: {fileID: 2764267668861335300}
   m_Layer: 7
   m_Name: Tuerca de La Puerta
   m_TagString: Untagged
@@ -68,9 +69,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Cam: {fileID: 0}
   rayDistance: 5
-  aniPuerta: {fileID: 2216620836077861470}
   puertaActiv: 0
   OpenDoor: 1
+--- !u!114 &2764267668861335300
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2216620836077861465}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ca3d02c914663f4f9a9ff95a6d96a6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioReference:
+    Guid:
+      Data1: -753555433
+      Data2: 1208731347
+      Data3: -1872957008
+      Data4: -919160819
+    Path: event:/Ambient/Door
 --- !u!1 &2216620836247722348
 GameObject:
   m_ObjectHideFlags: 0

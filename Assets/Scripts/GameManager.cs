@@ -22,6 +22,12 @@ public class GameManager : MonoBehaviour {
     public GameObject[] nocturnalLights;
     public LightsEmergencyBehaviour[] emergencyLights;
 
+    [Header("Ambient Sounds")]
+    public AudioAmbience ambient;
+    public SpatialSoundTrigger powerDown;
+    public SpatialSoundTrigger mainDoor;
+
+
     [Header("Piñatas references")]
     public EnemyController[] pinatas;
     #endregion
@@ -39,7 +45,7 @@ public class GameManager : MonoBehaviour {
         }
     }
 
-    void Start() {
+    public IEnumerator Start() {
         gameEvent = 0;
         score = 0;
         
@@ -50,6 +56,10 @@ public class GameManager : MonoBehaviour {
 
         foreach(var elight in emergencyLights) elight.TurnOff();
         foreach(var nlight in nocturnalLights) nlight.SetActive(false);
+    
+        yield return new WaitForSeconds(1f);
+
+        mainDoor.Play();
     }
 
     // Update is called once per frame
@@ -69,6 +79,7 @@ public class GameManager : MonoBehaviour {
         if(score >= 10 && gameEvent == 0){
             gameEvent++;
 
+            powerDown.Play();
             foreach(Transform lightObject in lightsContainer.transform){
                 var lightComponent = lightObject.GetComponent<LightsBehaviour>();
                 lightComponent.TurnOff();

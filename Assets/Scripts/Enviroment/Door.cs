@@ -14,10 +14,11 @@ public class Door : MonoBehaviour
 
     public bool OpenDoor;
 
-    // Start is called before the first frame update
-    void Start() 
-    {
-        aniPuerta = GetComponent<Animator>();
+    private SpatialSoundTrigger doorSfx;
+
+    void Awake() {
+        aniPuerta   = this.GetComponent<Animator>();
+        doorSfx     = this.GetComponent<SpatialSoundTrigger>();
     }
 
     // Update is called once per frame
@@ -42,6 +43,7 @@ public class Door : MonoBehaviour
                         puertaActiv = false;
                         OpenDoor = false;
                         Invoke("DoorBool", 1f);
+                        doorSfx.Play();
                     }
 
                     if(puertaActiv == false && OpenDoor == true)
@@ -50,6 +52,7 @@ public class Door : MonoBehaviour
                         puertaActiv = true;
                         OpenDoor = false;
                         Invoke("DoorBool", 1f);
+                        doorSfx.Play();
                     }
                 }
 

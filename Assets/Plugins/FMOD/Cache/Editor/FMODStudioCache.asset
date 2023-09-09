@@ -42,11 +42,38 @@ MonoBehaviour:
   Path: Fmod/candy-night-audios/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638298042030514849
+  lastModified: 638298063232744630
   FileSizes:
   - Name: 
-    Value: 1410
+    Value: 1484
   Exists: 1
+--- !u!114 &-7348512028727730122
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Ambient/Door
+  m_EditorClassIdentifier: 
+  Path: event:/Ambient/Door
+  Guid:
+    Data1: -753555433
+    Data2: 1208731347
+    Data3: -1872957008
+    Data4: -919160819
+  Banks:
+  - {fileID: 3560937628706698467}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-7242439519434203105
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -262,12 +289,14 @@ MonoBehaviour:
   - {fileID: 1475281889993720389}
   - {fileID: -8101156969738793385}
   - {fileID: -1540238964919019304}
+  - {fileID: 5253652395289263622}
+  - {fileID: -7348512028727730122}
   EditorParameters: []
   MasterBanks:
   - {fileID: 3560937628706698467}
   StringsBanks:
   - {fileID: -7847547866248821800}
-  cacheTime: 638298042030514849
+  cacheTime: 638298063232744630
   cacheVersion: 131607
 --- !u!114 &780857091696231878
 MonoBehaviour:
@@ -339,7 +368,7 @@ MonoBehaviour:
   Path: Fmod/candy-night-audios/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638298042030484857
+  lastModified: 638298063232694625
   FileSizes: []
   Exists: 1
 --- !u!114 &5101426414860696942
@@ -366,6 +395,33 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
+--- !u!114 &5253652395289263622
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Ambient/MainDoor
+  m_EditorClassIdentifier: 
+  Path: event:/Ambient/MainDoor
+  Guid:
+    Data1: 1115907907
+    Data2: 1229297188
+    Data3: -1220229958
+    Data4: 1945742588
+  Banks:
+  - {fileID: 3560937628706698467}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 20996
 --- !u!114 &6464848205265428689
 MonoBehaviour:
   m_ObjectHideFlags: 0
