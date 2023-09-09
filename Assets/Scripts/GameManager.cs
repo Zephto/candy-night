@@ -106,5 +106,9 @@ public class GameManager : MonoBehaviour {
 
     #region Public Methods
     public void AddScore() => score++;
+
+    public void StopPinatas(){
+        foreach(var pinata in pinatas) pinata.CanMove(false);
+    }
     #endregion
 }

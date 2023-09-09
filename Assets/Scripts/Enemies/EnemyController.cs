@@ -12,6 +12,11 @@ public class EnemyController : Interactable {
 	private EnemyAudios _enemyAudios;
 	#endregion
 
+	#region Public variables
+	[SerializeField] private MeshRenderer faceRenderer;
+	[SerializeField] private Texture screamerFace;
+	#endregion
+
 	#region Private variables
 	//Movement
 	private float stopDistance;
@@ -53,10 +58,19 @@ public class EnemyController : Interactable {
 				agent.SetDestination(playerReference.transform.position);
 				//Caminando
 			}else{
+				this.transform.position = new Vector3(
+					this.transform.position.x,
+					this.transform.position.y + 0.8f,
+					this.transform.position.z
+				);
+
 				//El enemigo ha atacado
+				CanMove(false);
 				agent.isStopped = true;
 				playerReference.Kill(this.transform);
 				_enemyAudios.PlayScream();
+				faceRenderer.material.mainTexture = screamerFace;
+
 			}
 
 		}else{

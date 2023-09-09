@@ -27,7 +27,30 @@ public class CharacterController : MonoBehaviour {
 	public void Kill(Transform target){
 		player.playerCanMove = false;
 		player.cameraCanMove = false;
+		zoneArm.SetActive(false);
 		this.transform.LookAt(target);
+		StartCoroutine(ShakeCamera());
+		GameManager.Instance.StopPinatas();
+	}
+	#endregion
+
+	#region Private Methods
+	private IEnumerator ShakeCamera(){
+		float currentTime = 0f;
+		float shakeDuration = 3f;
+		float shakeMagnitude = 0.05f;
+
+		Vector3 camOriginalPosition = Camera.main.transform.localPosition;
+
+		while(currentTime < shakeDuration){
+			Vector3 randomShake = Random.insideUnitCircle * shakeMagnitude;
+			Camera.main.transform.localPosition = camOriginalPosition + randomShake;
+		
+			currentTime += Time.deltaTime;
+			yield return null;
+		}
+
+		Camera.main.transform.localPosition = camOriginalPosition;
 	}
 	#endregion
 }

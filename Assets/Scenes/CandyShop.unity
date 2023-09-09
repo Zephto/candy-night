@@ -6819,6 +6819,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f683ce48f4d41054686bf5ae352ef0b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  faceRenderer: {fileID: 1893205459}
+  screamerFace: {fileID: 2800000, guid: 36460c5d2305f3c469e522676a399d54, type: 3}
 --- !u!1 &401032799
 GameObject:
   m_ObjectHideFlags: 0
@@ -31831,6 +31833,11 @@ Transform:
   m_Father: {fileID: 1523682972}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!23 &1356500662 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 6896378468616259000, guid: 269b8c5cf0a5a9a49a6ed67b3d908fec, type: 3}
+  m_PrefabInstance: {fileID: 1492545569}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1376167860
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -51241,6 +51248,16 @@ Mesh:
     offset: 0
     size: 0
     path: 
+--- !u!23 &1892898422 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -7523496386401974395, guid: a4fa7767a13ed3f42b4f74c5b885a498, type: 3}
+  m_PrefabInstance: {fileID: 1831418606}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &1893205459 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -3719213470971254961, guid: 0d6141bb3991cc64fa2d6e79e55c7ebd, type: 3}
+  m_PrefabInstance: {fileID: 1626659171}
+  m_PrefabAsset: {fileID: 0}
 --- !u!43 &1900277840
 Mesh:
   m_ObjectHideFlags: 0
@@ -55197,6 +55214,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f683ce48f4d41054686bf5ae352ef0b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  faceRenderer: {fileID: 1356500662}
+  screamerFace: {fileID: 2800000, guid: 36460c5d2305f3c469e522676a399d54, type: 3}
 --- !u!4 &2085212378 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1050033313593261840, guid: 39b8e28643c126f46b1d11566a7e4511, type: 3}
@@ -56624,6 +56643,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f683ce48f4d41054686bf5ae352ef0b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  faceRenderer: {fileID: 1892898422}
+  screamerFace: {fileID: 2800000, guid: 55e8797d183c9b842918bcbe0f1113eb, type: 3}
 --- !u!4 &873714304688907977
 Transform:
   m_ObjectHideFlags: 0
