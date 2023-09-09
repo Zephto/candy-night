@@ -159,6 +159,7 @@ public class GameManager : MonoBehaviour {
 
     public void FinishGame(){
         Debug.Log("Felicidades, fin del juego");
+        //Aqui cargar la pantalla de creditos o lo que siga :v
     }
     #endregion
 }
