@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.ComponentModel;
 using UnityEngine;
 
 /// <summary>
@@ -15,6 +16,9 @@ public class GameManager : MonoBehaviour {
     public GameObject Player;
     public bool NotaStart = true;
     
+    [Header("Door references")]
+    public MainDoor mainDoor;
+
     [Header("Enviroment references")]
     public ParticleSystem fogSystem;
     public GameObject lightsContainer;
@@ -24,9 +28,9 @@ public class GameManager : MonoBehaviour {
 
     [Header("Ambient Sounds")]
     public AudioAmbience ambient;
+    public SpatialSoundTrigger[] phoneBossAudios;
     public SpatialSoundTrigger powerDown;
-    public SpatialSoundTrigger mainDoor;
-
+    public SpatialSoundTrigger mainDoorSfx;
 
     [Header("Piñatas references")]
     public EnemyController[] pinatas;
@@ -59,7 +63,13 @@ public class GameManager : MonoBehaviour {
     
         yield return new WaitForSeconds(1f);
 
-        mainDoor.Play();
+        mainDoorSfx.Play();
+
+        yield return new WaitForSeconds(2f);
+        mainDoor.CloseDoors();
+
+        yield return new WaitForSeconds(1f);
+        foreach(var phoneAudio in phoneBossAudios) phoneAudio.Play();
     }
 
     // Update is called once per frame
@@ -76,7 +86,7 @@ public class GameManager : MonoBehaviour {
         }
 
         //25
-        if(score >= 10 && gameEvent == 0){
+        if(score >= 5 && gameEvent == 0){
             gameEvent++;
 
             powerDown.Play();
@@ -89,20 +99,43 @@ public class GameManager : MonoBehaviour {
             foreach(var light in sceneLights) light.SetActive(false);
             foreach(var elight in emergencyLights) elight.TurnOn();
         }
-        if(score >= 15 && gameEvent == 1){
+        // if(score >= 15 && gameEvent == 1){
+        //     gameEvent++;
+        //     pinatas[0].CanMove(true);
+        // }
+        // if(score >= 20 && gameEvent == 2){
+        //     gameEvent++;
+        //     pinatas[1].CanMove(true);
+        //     fogSystem.Play();
+        //     ambient.tension = 1;
+        // }
+        // if(score >= 100 && gameEvent == 3){
+        //     gameEvent++;
+        //     pinatas[2].CanMove(true);
+        //     ambient.tension = 2;
+        // }
+
+        if(score >= 10 && gameEvent == 1){
             gameEvent++;
-            pinatas[0].CanMove(true);
+
+            foreach(Transform lightObject in lightsContainer.transform){
+                var lightComponent = lightObject.GetComponent<LightsBehaviour>();
+                lightComponent.TurnOn();
+            }
+
+            foreach(var nlight in nocturnalLights) nlight.SetActive(false);
+            foreach(var light in sceneLights) light.SetActive(true);
+            foreach(var elight in emergencyLights) elight.TurnOff();
+
+            StopPinatas();
+            ambient.tension = 0;
+            mainDoorSfx.Play();
         }
-        if(score >= 20 && gameEvent == 2){
-            gameEvent++;
-            pinatas[1].CanMove(true);
-            fogSystem.Play();
-            ambient.tension = 1;
-        }
-        if(score >= 25 && gameEvent == 3){
-            gameEvent++;
-            pinatas[2].CanMove(true);
-            ambient.tension = 2;
+
+        if(Input.GetKeyDown(KeyCode.Space)){
+            Debug.Log("Puertas abiertas");
+            mainDoor.OpenDoors();
+            mainDoorSfx.Play();
         }
     }
 

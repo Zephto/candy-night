@@ -49,12 +49,10 @@ public class CharacterAudios : MonoBehaviour {
 	public void PlayBreathing(bool isSprinting){
 		
 		if(isSprinting && isBreathingPlay == false){
-			Debug.Log("==> sprinnn");
 			breathingInstance.setParameterByName("isSprint", 0);
 			breathingInstance.start();
 			isBreathingPlay = true;
 		}else{
-			Debug.Log("falseeee");
 			breathingInstance.setParameterByName("isSprint", 1);
 			isBreathingPlay = false;
 		}
