@@ -29,6 +29,7 @@ public class GameManager : MonoBehaviour {
     [Header("Ambient Sounds")]
     public AudioAmbience ambient;
     public SpatialSoundTrigger[] phoneBossAudios;
+    public SpatialSoundTrigger[] lofiAudios;
     public SpatialSoundTrigger powerDown;
     public SpatialSoundTrigger mainDoorSfx;
 
@@ -86,7 +87,7 @@ public class GameManager : MonoBehaviour {
         }
 
         //25
-        if(score >= 5 && gameEvent == 0){
+        if(score >= 20 && gameEvent == 0){
             gameEvent++;
 
             powerDown.Play();
@@ -99,23 +100,31 @@ public class GameManager : MonoBehaviour {
             foreach(var light in sceneLights) light.SetActive(false);
             foreach(var elight in emergencyLights) elight.TurnOn();
         }
-        // if(score >= 15 && gameEvent == 1){
-        //     gameEvent++;
-        //     pinatas[0].CanMove(true);
-        // }
-        // if(score >= 20 && gameEvent == 2){
-        //     gameEvent++;
-        //     pinatas[1].CanMove(true);
-        //     fogSystem.Play();
-        //     ambient.tension = 1;
-        // }
-        // if(score >= 100 && gameEvent == 3){
-        //     gameEvent++;
-        //     pinatas[2].CanMove(true);
-        //     ambient.tension = 2;
-        // }
 
-        if(score >= 10 && gameEvent == 1){
+        if(score >= 30 && gameEvent == 1){
+            gameEvent++;
+            pinatas[0].CanMove(true);
+            ambient.tension = 1;
+        }
+
+        if(score >= 40 && gameEvent == 2){
+            gameEvent++;
+            fogSystem.Play();
+            ambient.tension = 1;
+        }
+
+        if(score >= 50 && gameEvent == 3){
+            gameEvent++;
+            pinatas[1].CanMove(true);
+        }
+
+        if(score >= 60 && gameEvent == 4){
+            gameEvent++;
+            pinatas[2].CanMove(true);
+            ambient.tension = 2;
+        }
+
+        if(score >= 100 && gameEvent == 5){
             gameEvent++;
 
             foreach(Transform lightObject in lightsContainer.transform){
@@ -129,14 +138,15 @@ public class GameManager : MonoBehaviour {
 
             StopPinatas();
             ambient.tension = 0;
-            mainDoorSfx.Play();
-        }
-
-        if(Input.GetKeyDown(KeyCode.Space)){
-            Debug.Log("Puertas abiertas");
             mainDoor.OpenDoors();
             mainDoorSfx.Play();
         }
+
+        // if(Input.GetKeyDown(KeyCode.Space)){
+        //     Debug.Log("Puertas abiertas");
+        //     mainDoor.OpenDoors();
+        //     mainDoorSfx.Play();
+        // }
     }
 
     #region Public Methods
