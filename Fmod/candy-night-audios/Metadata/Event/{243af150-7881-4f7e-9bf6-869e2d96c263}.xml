@@ -91,8 +91,12 @@
 		</relationship>
 	</object>
 	<object class="MultiSound" id="{a9aabba9-8782-41ab-b7e8-c78c79661d24}">
+		<property name="playbackMode">
+			<value>1</value>
+		</property>
 		<relationship name="sounds">
 			<destination>{b894d61c-7a73-4f64-a545-113c318de724}</destination>
+			<destination>{3363eea7-daf5-443b-9cd3-3432e187c932}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusEffectChain" id="{e816cb6d-3084-45f5-aeaa-802a403641a5}">
@@ -130,6 +134,14 @@
 			<destination>{b2d3a714-527a-416a-b9e7-1c2a488f30ae}</destination>
 		</relationship>
 	</object>
+	<object class="SingleSound" id="{3363eea7-daf5-443b-9cd3-3432e187c932}">
+		<property name="volume">
+			<value>2.5</value>
+		</property>
+		<relationship name="audioFile">
+			<destination>{2b66f221-f03d-4675-a329-c4e1ac213e09}</destination>
+		</relationship>
+	</object>
 	<object class="MixerBusFader" id="{df46c89c-292d-4e3c-a478-38db275ba26c}" />
 	<object class="MixerBusEffectChain" id="{eb3bb440-4d8b-4a01-b2b8-b5e847ab25bf}">
 		<relationship name="effects">
@@ -140,7 +152,7 @@
 	<object class="MixerBusFader" id="{f6b3bd26-0b36-469c-9afd-a1cea391f389}" />
 	<object class="DistortionEffect" id="{f884fdea-b987-498f-9b45-dbdbd193f446}">
 		<property name="level">
-			<value>0.119999997</value>
+			<value>0.519999981</value>
 		</property>
 	</object>
 	<object class="SFXReverbEffect" id="{8e522969-b1f0-4741-a5db-925c1867708e}">
