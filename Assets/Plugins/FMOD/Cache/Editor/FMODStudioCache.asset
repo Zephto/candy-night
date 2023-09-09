@@ -1,5 +1,32 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8101156969738793385
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Ambient/PowerDown
+  m_EditorClassIdentifier: 
+  Path: event:/Ambient/PowerDown
+  Guid:
+    Data1: 423562896
+    Data2: 1315007955
+    Data3: 134135945
+    Data4: -594631431
+  Banks:
+  - {fileID: 3560937628706698467}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 12000
 --- !u!114 &-7847547866248821800
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15,10 +42,10 @@ MonoBehaviour:
   Path: Fmod/candy-night-audios/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638295573316676135
+  lastModified: 638298042030514849
   FileSizes:
   - Name: 
-    Value: 1230
+    Value: 1410
   Exists: 1
 --- !u!114 &-7242439519434203105
 MonoBehaviour:
@@ -153,6 +180,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-1540238964919019304
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Ambient/Lofi
+  m_EditorClassIdentifier: 
+  Path: event:/Ambient/Lofi
+  Guid:
+    Data1: -372647020
+    Data2: 1181239287
+    Data3: 1625826706
+    Data4: -1121146345
+  Banks:
+  - {fileID: 3560937628706698467}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 37714
 --- !u!114 &-559961600463094570
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -205,12 +259,15 @@ MonoBehaviour:
   - {fileID: 6464848205265428689}
   - {fileID: -559961600463094570}
   - {fileID: -7242439519434203105}
+  - {fileID: 1475281889993720389}
+  - {fileID: -8101156969738793385}
+  - {fileID: -1540238964919019304}
   EditorParameters: []
   MasterBanks:
   - {fileID: 3560937628706698467}
   StringsBanks:
   - {fileID: -7847547866248821800}
-  cacheTime: 638295573316676135
+  cacheTime: 638298042030514849
   cacheVersion: 131607
 --- !u!114 &780857091696231878
 MonoBehaviour:
@@ -239,6 +296,34 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &1475281889993720389
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Ambient/PhoneBoss
+  m_EditorClassIdentifier: 
+  Path: event:/Ambient/PhoneBoss
+  Guid:
+    Data1: -1346104220
+    Data2: 1148405509
+    Data3: -1953992562
+    Data4: -1409088622
+  Banks:
+  - {fileID: 3560937628706698467}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 1
+  Parameters:
+  - {fileID: 7957081290378833728}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 67194
 --- !u!114 &3560937628706698467
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -254,7 +339,7 @@ MonoBehaviour:
   Path: Fmod/candy-night-audios/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638295573316636124
+  lastModified: 638298042030484857
   FileSizes: []
   Exists: 1
 --- !u!114 &5101426414860696942
@@ -336,6 +421,30 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 183364
+--- !u!114 &7957081290378833728
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/PhoneBoss/DeathCounter
+  m_EditorClassIdentifier: 
+  Name: DeathCounter
+  StudioPath: 
+  Min: 0
+  Max: 10
+  Default: 0
+  ID:
+    data1: 2165589000
+    data2: 945475443
+  Type: 1
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &8626564196457117790
 MonoBehaviour:
   m_ObjectHideFlags: 0
