@@ -202,7 +202,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2895020, guid: fd15c9f80d1588041b0a3302eb307b00, type: 3}
       propertyPath: CantidadDeDulces
-      value: 30
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 410023476897060924, guid: fd15c9f80d1588041b0a3302eb307b00, type: 3}
       propertyPath: m_Name
@@ -330,7 +330,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2895020, guid: fd15c9f80d1588041b0a3302eb307b00, type: 3}
       propertyPath: CantidadDeDulces
-      value: 30
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 410023476897060924, guid: fd15c9f80d1588041b0a3302eb307b00, type: 3}
       propertyPath: m_Name
@@ -396,7 +396,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2895020, guid: fd15c9f80d1588041b0a3302eb307b00, type: 3}
       propertyPath: CantidadDeDulces
-      value: 30
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 410023476897060924, guid: fd15c9f80d1588041b0a3302eb307b00, type: 3}
       propertyPath: m_Name

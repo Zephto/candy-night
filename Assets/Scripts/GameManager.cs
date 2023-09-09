@@ -97,10 +97,12 @@ public class GameManager : MonoBehaviour {
             gameEvent++;
             pinatas[1].CanMove(true);
             fogSystem.Play();
+            ambient.tension = 1;
         }
         if(score >= 25 && gameEvent == 3){
             gameEvent++;
             pinatas[2].CanMove(true);
+            ambient.tension = 2;
         }
     }
 
@@ -109,6 +111,10 @@ public class GameManager : MonoBehaviour {
 
     public void StopPinatas(){
         foreach(var pinata in pinatas) pinata.CanMove(false);
+    }
+
+    public void FinishGame(){
+        Debug.Log("Felicidades, fin del juego");
     }
     #endregion
 }
