@@ -54883,7 +54883,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   faceRenderer: {fileID: 1356500662}
-  screamerFace: {fileID: 2800000, guid: 36460c5d2305f3c469e522676a399d54, type: 3}
+  screamerFace: {fileID: 2800000, guid: 3e5293f7e199a2946a9907d2876ce1e8, type: 3}
 --- !u!4 &2085212378 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1050033313593261840, guid: 39b8e28643c126f46b1d11566a7e4511, type: 3}

@@ -33,10 +33,12 @@ public class CameraInteraction : MonoBehaviour {
         {          
             if (Physics.Raycast(Cam.position, Cam.forward, out hit, rayDistance, LayerMask.GetMask("Interactable")))
             {
-                Debug.Log(hit.transform.name);
-                hit.transform.GetComponent<Interactable>().Interact();
-                pickable = hit.collider.GetComponent<Pickable>();
-                ArmBox = true;
+                if(!ArmBox){
+                    Debug.Log(hit.transform.name);
+                    hit.transform.GetComponent<Interactable>().Interact();
+                    pickable = hit.collider.GetComponent<Pickable>();
+                    ArmBox = true;
+                }
             }
 
             if (Physics.Raycast(Cam.position, Cam.forward, out hit, rayDistance, LayerMask.GetMask("PositionCandy")))
