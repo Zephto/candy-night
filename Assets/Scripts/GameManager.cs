@@ -100,6 +100,7 @@ public class GameManager : MonoBehaviour {
             foreach(var nlight in nocturnalLights) nlight.SetActive(true);
             foreach(var light in sceneLights) light.SetActive(false);
             foreach(var elight in emergencyLights) elight.TurnOn();
+            foreach(var phoneAudio in phoneBossAudios) phoneAudio.Stop();
         }
 
         if(score >= 40 && gameEvent == 1){

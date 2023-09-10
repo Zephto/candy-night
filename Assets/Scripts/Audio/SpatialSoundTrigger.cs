@@ -10,9 +10,23 @@ using UnityEngine;
 public class SpatialSoundTrigger : MonoBehaviour {
 	#region Fmod sounds
 	[SerializeField] private EventReference audioReference;
+	private EventInstance audioInstance;
 	#endregion
 
+	void Start() {
+		audioInstance = RuntimeManager.CreateInstance(audioReference);
+		audioInstance.set3DAttributes(RuntimeUtils.To3DAttributes(this.transform.position));
+	}
+
+	void OnDestroy() {
+		audioInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+	}
+
 	#region Public Methods
-	public void Play() => RuntimeManager.PlayOneShot(audioReference, this.transform.position);
+	public void Play() => audioInstance.start();
+
+	public void Stop(){
+		audioInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+	}
 	#endregion
 }

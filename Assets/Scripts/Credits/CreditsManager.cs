@@ -23,6 +23,7 @@ public class CreditsManager : MonoBehaviour {
 
 		returnToMenu.gameObject.SetActive(false);
 		StartCoroutine(StartCredits());
+		Cursor.lockState = CursorLockMode.None;
 	}
 
 	void OnDestroy() {
