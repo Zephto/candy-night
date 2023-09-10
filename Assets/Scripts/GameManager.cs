@@ -126,7 +126,7 @@ public class GameManager : MonoBehaviour {
             ambient.tension = 2;
         }
 
-        if(score >= 100 && gameEvent == 5){
+        if(score >= 126 && gameEvent == 5){
             gameEvent++;
 
             foreach(Transform lightObject in lightsContainer.transform){
@@ -144,11 +144,11 @@ public class GameManager : MonoBehaviour {
             mainDoorSfx.Play();
         }
 
-        if(Input.GetKeyDown(KeyCode.Space)){
-            Debug.Log("Puertas abiertas");
-            mainDoor.OpenDoors();
-            mainDoorSfx.Play();
-        }
+        // if(Input.GetKeyDown(KeyCode.Space)){
+        //     Debug.Log("Puertas abiertas");
+        //     mainDoor.OpenDoors();
+        //     mainDoorSfx.Play();
+        // }
     }
 
     #region Public Methods

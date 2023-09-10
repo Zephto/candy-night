@@ -6,11 +6,11 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/CandyShop.unity
-    guid: f753e17ddd5811041ae8552a3d51f565
-  - enabled: 1
     path: Assets/Scenes/MainMenu.unity
     guid: 9dac88bf897dace468ac5b2970ec2e9b
+  - enabled: 1
+    path: Assets/Scenes/CandyShop.unity
+    guid: f753e17ddd5811041ae8552a3d51f565
   - enabled: 1
     path: Assets/Scenes/Credits.unity
     guid: a642c778576c6e4468f713b64412a213
