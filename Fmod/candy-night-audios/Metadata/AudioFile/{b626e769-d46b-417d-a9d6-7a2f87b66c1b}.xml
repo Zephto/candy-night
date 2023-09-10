@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{b626e769-d46b-417d-a9d6-7a2f87b66c1b}">
+		<property name="assetPath">
+			<value>Menu/459771__matrixxx__select-denied-02.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>1</value>
+		</property>
+		<property name="length">
+			<value>0.72276643990929701</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{c4d8db74-fc69-40b6-a380-5a79492a0b43}</destination>
+		</relationship>
+	</object>
+</objects>

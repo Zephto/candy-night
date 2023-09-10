@@ -42,10 +42,10 @@ MonoBehaviour:
   Path: Fmod/candy-night-audios/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638298239413486245
+  lastModified: 638299283093242577
   FileSizes:
   - Name: 
-    Value: 1520
+    Value: 1618
   Exists: 1
 --- !u!114 &-7348512028727730122
 MonoBehaviour:
@@ -319,12 +319,14 @@ MonoBehaviour:
   - {fileID: 5253652395289263622}
   - {fileID: -7348512028727730122}
   - {fileID: -2439282169166678065}
+  - {fileID: 6902861921833854426}
+  - {fileID: 998986193748086950}
   EditorParameters: []
   MasterBanks:
   - {fileID: 3560937628706698467}
   StringsBanks:
   - {fileID: -7847547866248821800}
-  cacheTime: 638298239413486245
+  cacheTime: 638299283093242577
   cacheVersion: 131607
 --- !u!114 &780857091696231878
 MonoBehaviour:
@@ -353,6 +355,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &998986193748086950
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/MainMenu/Select
+  m_EditorClassIdentifier: 
+  Path: event:/MainMenu/Select
+  Guid:
+    Data1: -1723188935
+    Data2: 1268994191
+    Data3: -754000705
+    Data4: -1122988394
+  Banks:
+  - {fileID: 3560937628706698467}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &1475281889993720389
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -375,12 +404,12 @@ MonoBehaviour:
   - {fileID: 3560937628706698467}
   IsStream: 1
   Is3D: 1
-  IsOneShot: 1
+  IsOneShot: 0
   Parameters:
   - {fileID: 7957081290378833728}
   MinDistance: 1
   MaxDistance: 20
-  Length: 67194
+  Length: 105714
 --- !u!114 &3560937628706698467
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -396,7 +425,7 @@ MonoBehaviour:
   Path: Fmod/candy-night-audios/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638298239413446181
+  lastModified: 638299283093212561
   FileSizes: []
   Exists: 1
 --- !u!114 &5101426414860696942
@@ -477,6 +506,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &6902861921833854426
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/MainMenu/MenuMusic
+  m_EditorClassIdentifier: 
+  Path: event:/MainMenu/MenuMusic
+  Guid:
+    Data1: -825617116
+    Data2: 1272744775
+    Data3: -2124414064
+    Data4: -257074594
+  Banks:
+  - {fileID: 3560937628706698467}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 75452
 --- !u!114 &7916381857292720903
 MonoBehaviour:
   m_ObjectHideFlags: 0

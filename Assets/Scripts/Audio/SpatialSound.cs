@@ -22,4 +22,8 @@ public class SpatialSound : MonoBehaviour {
 	void OnDestroy() {
 		audioInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
 	}
+
+	public void Stop(){
+		audioInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+	}
 }
