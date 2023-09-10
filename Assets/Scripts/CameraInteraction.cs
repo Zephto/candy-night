@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.TextCore.Text;
 
 /// <summary>
 /// Componente que se usa para controlar las interacciones con raycast

@@ -39,7 +39,8 @@ public class Door : MonoBehaviour
 
                     if(puertaActiv == true && OpenDoor == true)
                     {
-                        aniPuerta.SetBool("DoorOpen", false);
+                        // aniPuerta.SetBool("DoorOpen", false);
+                        aniPuerta.SetTrigger("CloseDoor");
                         puertaActiv = false;
                         OpenDoor = false;
                         Invoke("DoorBool", 1f);
@@ -48,7 +49,8 @@ public class Door : MonoBehaviour
 
                     if(puertaActiv == false && OpenDoor == true)
                     {
-                        aniPuerta.SetBool("DoorOpen", true);
+                        // aniPuerta.SetBool("DoorOpen", true);
+                        aniPuerta.SetTrigger("OpenDoor");
                         puertaActiv = true;
                         OpenDoor = false;
                         Invoke("DoorBool", 1f);
