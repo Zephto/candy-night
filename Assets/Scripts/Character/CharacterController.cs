@@ -30,7 +30,7 @@ public class CharacterController : MonoBehaviour {
 		zoneArm.SetActive(false);
 		this.transform.LookAt(target);
 		StartCoroutine(ShakeCamera());
-		GameManager.Instance.StopPinatas();
+		GameManager.Instance.GameOver();
 	}
 	#endregion
 

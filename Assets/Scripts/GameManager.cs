@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 /// <summary>
 /// Controlador principal del juego
@@ -142,11 +143,11 @@ public class GameManager : MonoBehaviour {
             mainDoorSfx.Play();
         }
 
-        // if(Input.GetKeyDown(KeyCode.Space)){
-        //     Debug.Log("Puertas abiertas");
-        //     mainDoor.OpenDoors();
-        //     mainDoorSfx.Play();
-        // }
+        if(Input.GetKeyDown(KeyCode.Space)){
+            Debug.Log("Puertas abiertas");
+            mainDoor.OpenDoors();
+            mainDoorSfx.Play();
+        }
     }
 
     #region Public Methods
@@ -157,8 +158,11 @@ public class GameManager : MonoBehaviour {
     }
 
     public void FinishGame(){
-        Debug.Log("Felicidades, fin del juego");
-        //Aqui cargar la pantalla de creditos o lo que siga :v
+        SceneManager.LoadSceneAsync("Credits");
+    }
+
+    public void GameOver(){
+        StopPinatas();
     }
     #endregion
 }

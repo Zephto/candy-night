@@ -44,4 +44,7 @@ public class CreditsManager : MonoBehaviour {
 		selection.Play();
 		music.Stop();
 
-		yield return new WaitForSe
+		yield return new WaitForSeconds(0.5f);
+		SceneManager.LoadSceneAsync("MainMenu");
+	}
+}
