@@ -12,6 +12,7 @@ public class Pickable : Interactable {
 
     public CandyEstant candyEstantReference;
     public int CantidadDeDulces;
+    public GameObject[] candyBags;
 
     void Awake() {
         playerReference = GameObject.FindObjectOfType<CharacterController>();
@@ -25,6 +26,13 @@ public class Pickable : Interactable {
         {
             playerReference.cameraInteraction.ArmBox = false;
             Destroy(gameObject);
+        }
+    }
+
+    public void RemoveBag(){
+        CantidadDeDulces--;
+        if(CantidadDeDulces < candyBags.Length){
+            candyBags[CantidadDeDulces].gameObject.SetActive(false);
         }
     }
 

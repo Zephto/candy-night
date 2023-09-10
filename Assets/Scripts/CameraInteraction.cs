@@ -48,7 +48,7 @@ public class CameraInteraction : MonoBehaviour {
                     //if(estantParent.gameObject.GetInstanceID().ToString() == candyEstantId){
                         Debug.Log(hit.transform.name);
                         estantParent.SpawnCandy(hit.collider.transform);
-                        pickable.CantidadDeDulces--;
+                        pickable.RemoveBag();
                         hit.collider.enabled = false;
                         characterAudios.PlayPlace();
                     //}else{
