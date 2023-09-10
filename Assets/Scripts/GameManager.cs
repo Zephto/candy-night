@@ -15,6 +15,7 @@ public class GameManager : MonoBehaviour {
     [Header("General references")]
     public GameObject CamNota;
     public GameObject Player;
+    public CharacterController characterController;
     public bool NotaStart = true;
     
     [Header("Door references")]
@@ -142,6 +143,8 @@ public class GameManager : MonoBehaviour {
             ambient.tension = 0;
             mainDoor.OpenDoors();
             mainDoorSfx.Play();
+            fogSystem.Stop();
+            characterController.zoneArm.gameObject.SetActive(false);
         }
 
         // if(Input.GetKeyDown(KeyCode.Space)){
@@ -164,6 +167,10 @@ public class GameManager : MonoBehaviour {
 
     public void GameOver(){
         StopPinatas();
+
+        LeanTween.delayedCall(this.gameObject, 2.8f, ()=>{
+            SceneManager.LoadSceneAsync("Gameover");
+        });
     }
     #endregion
 }

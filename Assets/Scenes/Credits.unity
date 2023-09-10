@@ -576,8 +576,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "<b>Dise\xF1o y documentaci\xF3n:</b>\n@RealSauceDoctor\n\n<b>Programaci\xF3n:</b>\n@Zephto\n@Klark\n\n<b>Modelos
-    y texturas:</b>\n@Asdonaur\n\n\n\n\n<b>Third-party Assets\r </b>\n\n<b>FMOD:</b>
+  m_text: "<b>Dise\xF1o y documentaci\xF3n:</b>\n@RealSauceDoctor\n\n<b>Programaci\xF3n:</b>\n@ZuperHugo\n@KlarkDev
+    \n\n<b>Modelos y texturas:</b>\n@Asdonaur\n\n\n\n\n<b>Third-party Assets\r </b>\n\n<b>FMOD:</b>
     Made using FMOD Studio by Firelight Technologies Pty Ltd.\r\n\n<b>Modular First
     Person Controller:</b> https://assetstore.unity.com/packages/3d/characters/modular-first-person-controller-189884#description\r\n\n<b>Skybox
     Series Free:</b> https://assetstore.unity.com/packages/2d/textures-materials/sky/skybox-series-free-103633\n\n<b>LeanTween:</b>
