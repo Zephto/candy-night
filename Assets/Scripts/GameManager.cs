@@ -36,7 +36,7 @@ public class GameManager : MonoBehaviour {
     public SpatialSoundTrigger mainDoorSfx;
 
     [Header("Piñatas references")]
-    public EnemyController[] pinatas;
+    public EnemyBase[] pinatas;
     #endregion
 
     #region Private variables

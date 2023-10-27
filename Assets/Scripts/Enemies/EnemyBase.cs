@@ -6,7 +6,7 @@ using UnityEngine.AI;
 /// <summary>
 /// Componente usado para controlar los movimientos de los enemigos
 /// </summary>
-public class EnemyController : Interactable {
+public abstract class EnemyBase : Interactable {
 	
 	#region Classes references
 	private EnemyAudios _enemyAudios;
@@ -18,16 +18,18 @@ public class EnemyController : Interactable {
 	#endregion
 
 	#region Private variables
-	//Movement
-	private float stopDistance;
-
 	//Navmesh variables
-	private NavMeshAgent agent;
-	private CharacterController playerReference;
+	protected NavMeshAgent agent;
+	protected CharacterController playerReference;
 	
 	//In camera detector
 	private Plane[] cameraFrustrum;
 	private Collider enemyCollider;
+	#endregion
+
+	#region Consts
+	//Max distance to approach the player
+	protected const float StopDistance = 1f;
 	#endregion
 
 	void Awake() {
@@ -39,22 +41,24 @@ public class EnemyController : Interactable {
 
 	void Start() {
 		agent.isStopped = true;
-		stopDistance = 1f;
 		agent.enabled = false;
 
-		InvokeRepeating("PlaySteps", 0f, 1f);
+		// InvokeRepeating("PlaySteps", 0f, 1f);
 	}
 
 	void Update() {
 		if(!agent.isActiveAndEnabled) return;
 		
+		// AbstractUpdate();
+		// return;
+
 		cameraFrustrum = GeometryUtility.CalculateFrustumPlanes(Camera.main);
 		if(!GeometryUtility.TestPlanesAABB(cameraFrustrum, enemyCollider.bounds)) {
 			agent.isStopped = false;
 
 			var distance = Vector3.Distance(this.transform.position, playerReference.transform.position);
 			
-			if(distance > stopDistance){
+			if(distance > StopDistance){
 				agent.SetDestination(playerReference.transform.position);
 				//Caminando
 			}else{
@@ -77,6 +81,8 @@ public class EnemyController : Interactable {
 			agent.isStopped = true;
 		}
 	}
+
+	protected abstract void AbstractUpdate();
 
 	#region Override Methods
 	public override void Interact(){
@@ -108,6 +114,14 @@ public class EnemyController : Interactable {
 		if(!agent.isStopped){
 			_enemyAudios.PlaySteps();
 		}
+	}
+
+	/// <summary>
+	/// Check if player is looking the enemie
+	/// </summary>
+	protected bool IsPlayerLooking() {
+		cameraFrustrum = GeometryUtility.CalculateFrustumPlanes(Camera.main);
+		return GeometryUtility.TestPlanesAABB(cameraFrustrum, enemyCollider.bounds);
 	}
 	#endregion
 
